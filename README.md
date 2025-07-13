@@ -1,4 +1,10 @@
-# AEM Block Collection
+# Postal Marketing Website
+
+## Product Specification
+Refer to `PRD.md` for the complete product requirements document outlining the postal marketing website specifications, features, and implementation strategy.
+
+## Technical Specification
+Refer to `TECHNICAL_SPEC.md` for detailed development guidelines, architecture decisions, and implementation specifications.
 
 This project provides a foundation for starting an AEM Edge Delivery Services project. It includes many common blocks and features a project might need.
 

@@ -1,5 +1,11 @@
 # AI Context for Adobe EDS Project
 
+## Product Specification
+Refer to `PRD.md` for the complete product requirements document outlining the postal marketing website specifications, features, and implementation strategy.
+
+## Technical Specification
+Refer to `TECHNICAL_SPEC.md` for detailed development guidelines, architecture decisions, and implementation specifications.
+
 ## Codebase Overview
 This is an Adobe Edge Delivery Services project for da.live focused on building custom blocks for content delivery.
 

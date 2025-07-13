@@ -1,3 +1,6 @@
+# Product Specification: See PRD.md for complete requirements
+# Technical Specification: See TECHNICAL_SPEC.md for development guidelines
+
 # Dependencies
 node_modules/
 npm-debug.log*
