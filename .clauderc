@@ -1,0 +1,44 @@
+{
+  "project_type": "Adobe EDS",
+  "description": "Adobe Edge Delivery Services blocks project for da.live",
+  "focus_areas": [
+    "blocks/",
+    "styles/"
+  ],
+  "file_patterns": {
+    "primary": ["*.css", "*.js"],
+    "secondary": ["*.html", "*.md"],
+    "ignore": ["node_modules/", ".git/", "*.log", "dist/"]
+  },
+  "coding_standards": {
+    "css": {
+      "methodology": "BEM-like with EDS conventions",
+      "responsive": "mobile-first",
+      "units": "rem for spacing, px for borders",
+      "naming": "lowercase with hyphens"
+    },
+    "javascript": {
+      "style": "ES6+ modules",
+      "framework": "vanilla JS preferred",
+      "patterns": "progressive enhancement",
+      "export": "default function for block decoration"
+    },
+    "html": {
+      "semantics": "semantic HTML5 elements",
+      "accessibility": "WCAG 2.1 AA",
+      "structure": "clean minimal markup"
+    }
+  },
+  "eds_conventions": {
+    "block_structure": "folder per block with matching CSS/JS names",
+    "css_specificity": "low specificity with :where()",
+    "performance": "optimize for Core Web Vitals",
+    "images": "lazy loading with EDS patterns"
+  },
+  "preferences": {
+    "line_length": 120,
+    "indentation": 2,
+    "quote_style": "single",
+    "semicolons": true
+  }
+}
