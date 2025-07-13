@@ -11,6 +11,15 @@ Create visually appealing content previews that can be used across various secti
 - Encourage newsletter signups and service inquiries
 - Cross-sell related postal services
 
+## Visual Reference
+![Annotated Teaser Block Example](./annotated-screenshot.png)
+
+The annotated screenshot above shows the teaser block structure with:
+- **Header**: The main title "Free Supplies" positioned prominently at the top
+- **Description**: Supporting text explaining the service offering and benefits
+- **Image**: Visual content on the right side showing postal supplies and boxes
+- **CTA Text & Link**: "Order Now" button that links to the specified destination
+
 ## Authorable Fields
 
 ### Field Structure

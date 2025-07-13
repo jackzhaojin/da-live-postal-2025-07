@@ -114,7 +114,7 @@ Create a modern, engaging postal service website that effectively communicates p
 **Component Type**: Custom da.live Block
 **Purpose**: Engaging preview component for promoting postal services, news, and marketing content
 
-**Documentation**: See [TEASER_PRD.md](./TEASER_PRD.md) for complete specifications and implementation details.
+**Documentation**: See [TEASER_PRD.md](./prd/teaser-block/TEASER_PRD.md) for complete specifications and implementation details.
 
 **Summary**: A flexible teaser component with 5 authorable fields (header, description, image, ctaLink, ctaText) that creates engaging content previews throughout the website.
 
