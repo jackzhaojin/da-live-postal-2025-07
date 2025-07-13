@@ -1,6 +1,6 @@
 export default function decorate(block) {
   const rows = [...block.querySelectorAll(':scope > div')];
-  
+
   if (rows.length < 5) {
     console.warn('Teaser block requires exactly 5 rows');
     return;
@@ -8,12 +8,26 @@ export default function decorate(block) {
 
   // Parse the 5 fields from rows
   const data = {};
-  rows.forEach(row => {
+  rows.forEach((row) => {
     const cells = row.querySelectorAll(':scope > div');
     if (cells.length >= 2) {
-      const key = cells[0].textContent.trim();
+      const rawKey = cells[0].textContent.trim().toLowerCase();
       const valueDiv = cells[1];
-      
+
+      const fieldMap = {
+        header: 'header',
+        description: 'description',
+        image: 'image',
+        ctalink: 'ctaLink',
+        'cta link': 'ctaLink',
+        ctatext: 'ctaText',
+        'cta text': 'ctaText',
+      };
+
+      const key = fieldMap[rawKey];
+
+      if (!key) return;
+
       if (key === 'image') {
         data[key] = valueDiv;
       } else {
@@ -59,7 +73,7 @@ export default function decorate(block) {
   // Image section
   const imageContainer = document.createElement('div');
   imageContainer.className = 'teaser__image';
-  
+
   if (imageData) {
     const img = imageData.querySelector('img');
     if (img) {
