@@ -6,6 +6,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is an **Adobe Edge Delivery Services (EDS)** project for da.live, implementing a postal marketing website using a block-based architecture. The system follows EDS conventions with vanilla JavaScript and progressive enhancement for optimal performance.
 
+### Quick Reference
+For comprehensive project analysis including all 18+ blocks, technology stack details, and architectural patterns, see the [Project Analysis](./project-analysis.md) document.
+
 ### Core Architecture Pattern
 - **Block-based modularity**: Self-contained components in `/blocks/` directory
 - **EDS decoration pattern**: Each block exports a `decorate(block)` function

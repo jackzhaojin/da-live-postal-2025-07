@@ -3,6 +3,9 @@
 ## Overview
 This document outlines the technical standards and best practices for developing Adobe Edge Delivery Services (EDS) applications, with a focus on block-based architecture and da.live standards compliance.
 
+### Project Analysis Reference
+For a comprehensive analysis of the current project architecture, technology stack, and existing block implementations, see the [Project Analysis](./project-analysis.md) document. It provides detailed insights into all 18+ blocks, JavaScript patterns, CSS architecture, and development workflows currently implemented in this codebase.
+
 ## Core Principles
 
 ### 1. Block-Based Architecture

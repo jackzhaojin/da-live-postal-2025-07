@@ -1,10 +1,20 @@
 # Postal Marketing Website
 
-## Product Specification
-Refer to `PRD.md` for the complete product requirements document outlining the postal marketing website specifications, features, and implementation strategy.
+## Project Documentation
 
-## Technical Specification
-Refer to `TECHNICAL_SPEC.md` for detailed development guidelines, architecture decisions, and implementation specifications.
+### Core Documentation
+- **Product Requirements**: See `PRD.md` for complete product specifications and implementation strategy
+- **Technical Specification**: See `TECHNICAL_SPEC.md` for development guidelines and architecture decisions
+- **Development Guide**: See `AGENT.md` for block development patterns and EDS conventions
+- **Project Analysis**: See `project-analysis.md` for comprehensive codebase analysis and architecture overview
+
+### Quick Reference
+For a detailed understanding of the project's architecture, technology stack, and code patterns, refer to the comprehensive [Project Analysis](./project-analysis.md) which provides:
+- Complete technology stack overview
+- Block architecture analysis (18+ components)
+- JavaScript and CSS patterns
+- Development workflow and quality standards
+- Performance and accessibility guidelines
 
 This project provides a foundation for starting an AEM Edge Delivery Services project. It includes many common blocks and features a project might need.
 

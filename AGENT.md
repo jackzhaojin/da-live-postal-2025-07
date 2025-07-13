@@ -1,13 +1,14 @@
 # Adobe EDS Blocks Agent
 
-## Product Specification
-Refer to `PRD.md` for the complete product requirements document outlining the postal marketing website specifications, features, and implementation strategy.
-
-## Technical Specification
-Refer to `TECHNICAL_SPEC.md` for detailed development guidelines, architecture decisions, and implementation specifications.
+## Project Documentation References
+- **Product Requirements**: `PRD.md` - Complete product specifications and implementation strategy
+- **Technical Specification**: `TECHNICAL_SPEC.md` - Development guidelines and architecture decisions
+- **Project Analysis**: `project-analysis.md` - Comprehensive codebase analysis with all 18+ blocks documented
 
 ## Project Overview
 This is an Adobe Edge Delivery Services (EDS) project focused on building custom blocks for da.live. The project follows EDS conventions and patterns for creating performant, semantic HTML blocks.
+
+**For detailed project analysis**, including technology stack, all block components, JavaScript/CSS patterns, and development workflows, see the [Project Analysis](./project-analysis.md) document.
 
 ## Block Architecture
 Blocks are built following Adobe EDS patterns:
