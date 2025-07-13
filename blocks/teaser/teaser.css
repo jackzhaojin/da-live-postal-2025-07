@@ -1,10 +1,12 @@
+/* stylelint-disable selector-class-pattern */
+
 /* Teaser Block - Matching Annotated Screenshot Exactly */
 
 .teaser {
   display: flex;
   align-items: stretch;
-  background: #ffffff;
-  overflow: hidden;
+  background: #fff;
+  overflow: visible;
   position: relative;
 }
 
@@ -14,7 +16,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: #ffffff;
+  background: #fff;
   position: relative;
   z-index: 2;
 }
@@ -23,14 +25,16 @@
   font-size: 2.5rem;
   font-weight: 300;
   line-height: 1.2;
-  margin: 0 0 1rem 0;
-  color: #ffffff;
+  margin: 0 0 1rem;
+  color: #fff;
   background: #4a6fa5;
   padding: 1rem 1.5rem;
   position: relative;
   display: inline-block;
+
   /* Much more dramatic angle to match screenshot */
   clip-path: polygon(0 0, calc(100% + 150px) 0, calc(100% + 100px) 100%, 0 100%);
+
   /* Extend far to the right to overlap with image */
   margin-right: -200px;
   padding-right: 220px;
@@ -40,16 +44,16 @@
 .teaser__description {
   font-size: 1rem;
   line-height: 1.5;
-  margin: 0 0 1.5rem 0;
-  color: #333333;
-  background: #ffffff;
+  margin: 0 0 1.5rem;
+  color: #333;
+  background: #fff;
 }
 
 .teaser__cta {
   display: inline-block;
   padding: 0.75rem 2rem;
   background: #3e5077 !important;
-  color: #ffffff !important;
+  color: #fff !important;
   text-decoration: none !important;
   font-weight: 600;
   text-transform: uppercase;
@@ -61,13 +65,13 @@
 .teaser__cta:hover {
   background: #2c3e50 !important;
   text-decoration: none !important;
-  color: #ffffff !important;
+  color: #fff !important;
 }
 
 .teaser__cta:visited,
 .teaser__cta:link,
 .teaser__cta:active {
-  color: #ffffff !important;
+  color: #fff !important;
   text-decoration: none !important;
 }
 
@@ -85,7 +89,7 @@
 }
 
 /* Mobile responsive */
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .teaser {
     flex-direction: column;
   }
@@ -94,6 +98,7 @@
     margin-right: 0;
     padding-right: 1.5rem;
     clip-path: polygon(0 0, calc(100% - 30px) 0, 100% 100%, 0 100%);
+    font-size: 2rem;
   }
 
   .teaser__image {
@@ -104,7 +109,4 @@
     padding: 1.5rem;
   }
 
-  .teaser__header {
-    font-size: 2rem;
-  }
 }
