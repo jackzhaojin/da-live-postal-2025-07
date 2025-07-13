@@ -12,6 +12,7 @@ Create visually appealing content previews that can be used across various secti
 - Cross-sell related postal services
 
 ## Visual Reference
+**IMPORTANT** to follow
 ![Annotated Teaser Block Example](./annotated-screenshot.png)
 
 The annotated screenshot above shows the teaser block structure with:
