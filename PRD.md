@@ -114,28 +114,9 @@ Create a modern, engaging postal service website that effectively communicates p
 **Component Type**: Custom da.live Block
 **Purpose**: Engaging preview component for promoting postal services, news, and marketing content
 
-**Requirements**:
-- **Flexible Layout Options**: Support for image-left, image-right, image-top, and image-background configurations
-- **Content Elements**: Headline, description, call-to-action button, optional eyebrow text
-- **Visual Features**: High-quality image support with lazy loading and responsive srcset
-- **Interactive States**: Hover effects and focus states for accessibility
-- **Link Behavior**: Support for internal pages, external links, and modal triggers
-- **Responsive Design**: Optimized layouts for mobile, tablet, and desktop viewing
+**Documentation**: See [TEASER_PRD.md](./TEASER_PRD.md) for complete specifications and implementation details.
 
-**Content Structure**:
-```
-| Image | Eyebrow Text (optional) |
-| Image | Headline               |
-| Image | Description            |
-| Image | CTA Button             |
-```
-
-**Use Cases**:
-- Service promotions on homepage
-- Featured content in article listings
-- Cross-selling in service pages
-- Newsletter signup campaigns
-- Event announcements
+**Summary**: A flexible teaser component with 5 authorable fields (header, description, image, ctaLink, ctaText) that creates engaging content previews throughout the website.
 
 ## Future Enhancements
 - Custom postal service tracking integration
