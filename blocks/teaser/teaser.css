@@ -1,10 +1,11 @@
-/* Teaser Block - Matching Annotated Screenshot */
+/* Teaser Block - Matching Annotated Screenshot Exactly */
 
 .teaser {
   display: flex;
   align-items: stretch;
   background: #ffffff;
   overflow: hidden;
+  position: relative;
 }
 
 .teaser__content {
@@ -15,6 +16,7 @@
   justify-content: center;
   background: #ffffff;
   position: relative;
+  z-index: 2;
 }
 
 .teaser__header {
@@ -27,7 +29,12 @@
   padding: 1rem 1.5rem;
   position: relative;
   display: inline-block;
-  clip-path: polygon(0 0, calc(100% - 30px) 0, 100% 100%, 0 100%);
+  /* Much more dramatic angle to match screenshot */
+  clip-path: polygon(0 0, calc(100% + 150px) 0, calc(100% + 100px) 100%, 0 100%);
+  /* Extend far to the right to overlap with image */
+  margin-right: -200px;
+  padding-right: 220px;
+  z-index: 3;
 }
 
 .teaser__description {
@@ -41,24 +48,33 @@
 .teaser__cta {
   display: inline-block;
   padding: 0.75rem 2rem;
-  background: #2c3e50;
-  color: #ffffff;
-  text-decoration: none;
+  background: #3e5077 !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   align-self: flex-start;
+  border: none;
 }
 
 .teaser__cta:hover {
-  background: #34495e;
-  text-decoration: none;
-  color: #ffffff;
+  background: #2c3e50 !important;
+  text-decoration: none !important;
+  color: #ffffff !important;
+}
+
+.teaser__cta:visited,
+.teaser__cta:link,
+.teaser__cta:active {
+  color: #ffffff !important;
+  text-decoration: none !important;
 }
 
 .teaser__image {
   flex: 1;
   position: relative;
+  z-index: 1;
 }
 
 .teaser__image img {
@@ -72,6 +88,12 @@
 @media (max-width: 768px) {
   .teaser {
     flex-direction: column;
+  }
+
+  .teaser__header {
+    margin-right: 0;
+    padding-right: 1.5rem;
+    clip-path: polygon(0 0, calc(100% - 30px) 0, 100% 100%, 0 100%);
   }
 
   .teaser__image {
