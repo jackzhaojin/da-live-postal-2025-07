@@ -1,0 +1,637 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/vite.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vite + React + TS</title>
+    <script>
+        // Set theme class before any content loads
+        const url = new URL(window.location.href);
+        const theme = url.searchParams.get("theme");
+        if (theme) {
+            document.documentElement.classList.add(theme);
+        }
+    </script>
+    <script type="module" crossorigin="" src="/assets/index-xgWGpYNd.js"></script>
+    <link rel="stylesheet" crossorigin="" href="/assets/index-DDc7gu5K.css">
+</head>
+
+<body>
+    <div id="root">
+        <div class="min-h-screen bg-background">
+            <section
+                class="relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-blue-50 py-20 lg:py-32"><svg
+                    aria-hidden="true"
+                    class="pointer-events-none absolute inset-0 h-full w-full fill-blue-400/20 stroke-blue-400/20 [mask-image:radial-gradient(500px_circle_at_center,white,transparent)] inset-x-0 inset-y-[-30%] h-[200%] skew-y-12">
+                    <defs>
+                        <pattern id="«r0»" width="40" height="40" patternUnits="userSpaceOnUse" x="-1" y="-1">
+                            <path d="M.5 40V.5H40" fill="none" stroke-dasharray="0"></path>
+                        </pattern>
+                    </defs>
+                    <rect width="100%" height="100%" fill="url(#«r0»)"></rect><svg x="-1" y="-1"
+                        class="overflow-visible">
+                        <rect width="39" height="39" x="401" y="321" fill="currentColor" stroke-width="0"
+                            opacity="0.0956549391936278"></rect>
+                        <rect width="39" height="39" x="881" y="1" fill="currentColor" stroke-width="0" opacity="0">
+                        </rect>
+                        <rect width="39" height="39" x="361" y="361" fill="currentColor" stroke-width="0"
+                            opacity="0.09188014479877893"></rect>
+                        <rect width="39" height="39" x="761" y="481" fill="currentColor" stroke-width="0" opacity="0">
+                        </rect>
+                        <rect width="39" height="39" x="121" y="161" fill="currentColor" stroke-width="0"
+                            opacity="0.08720791539235506"></rect>
+                        <rect width="39" height="39" x="1" y="161" fill="currentColor" stroke-width="0"
+                            opacity="0.08456682164978702"></rect>
+                        <rect width="39" height="39" x="1201" y="121" fill="currentColor" stroke-width="0"
+                            opacity="0.08174569161201362"></rect>
+                        <rect width="39" height="39" x="681" y="201" fill="currentColor" stroke-width="0"
+                            opacity="0.07870077517291066"></rect>
+                        <rect width="39" height="39" x="1001" y="161" fill="currentColor" stroke-width="0"
+                            opacity="0.07556923532101792"></rect>
+                        <rect width="39" height="39" x="441" y="121" fill="currentColor" stroke-width="0"
+                            opacity="0.0721776408579899"></rect>
+                        <rect width="39" height="39" x="1561" y="321" fill="currentColor" stroke-width="0"
+                            opacity="0.06873648524342571"></rect>
+                        <rect width="39" height="39" x="161" y="481" fill="currentColor" stroke-width="0"
+                            opacity="0.06505995923362207"></rect>
+                        <rect width="39" height="39" x="1401" y="161" fill="currentColor" stroke-width="0" opacity="0">
+                        </rect>
+                        <rect width="39" height="39" x="1441" y="441" fill="currentColor" stroke-width="0" opacity="0">
+                        </rect>
+                        <rect width="39" height="39" x="361" y="241" fill="currentColor" stroke-width="0"
+                            opacity="0.05333032635098789"></rect>
+                        <rect width="39" height="39" x="521" y="401" fill="currentColor" stroke-width="0" opacity="0">
+                        </rect>
+                        <rect width="39" height="39" x="1241" y="361" fill="currentColor" stroke-width="0" opacity="0">
+                        </rect>
+                        <rect width="39" height="39" x="801" y="241" fill="currentColor" stroke-width="0"
+                            opacity="0.040421596422675066"></rect>
+                        <rect width="39" height="39" x="921" y="321" fill="currentColor" stroke-width="0"
+                            opacity="0.035855124771478585"></rect>
+                        <rect width="39" height="39" x="641" y="241" fill="currentColor" stroke-width="0" opacity="0">
+                        </rect>
+                        <rect width="39" height="39" x="281" y="121" fill="currentColor" stroke-width="0" opacity="0">
+                        </rect>
+                        <rect width="39" height="39" x="241" y="321" fill="currentColor" stroke-width="0" opacity="0">
+                        </rect>
+                        <rect width="39" height="39" x="1521" y="41" fill="currentColor" stroke-width="0"
+                            opacity="0.016428956933668814"></rect>
+                        <rect width="39" height="39" x="961" y="41" fill="currentColor" stroke-width="0"
+                            opacity="0.011252679469180293"></rect>
+                        <rect width="39" height="39" x="1001" y="81" fill="currentColor" stroke-width="0" opacity="0">
+                        </rect>
+                        <rect width="39" height="39" x="41" y="441" fill="currentColor" stroke-width="0"
+                            opacity="0.00039769334543962034"></rect>
+                        <rect width="39" height="39" x="641" y="81" fill="currentColor" stroke-width="0" opacity="0">
+                        </rect>
+                        <rect width="39" height="39" x="1601" y="401" fill="currentColor" stroke-width="0" opacity="0">
+                        </rect>
+                        <rect width="39" height="39" x="1401" y="321" fill="currentColor" stroke-width="0" opacity="0">
+                        </rect>
+                        <rect width="39" height="39" x="881" y="401" fill="currentColor" stroke-width="0" opacity="0">
+                        </rect>
+                    </svg>
+                </svg>
+                <div class="relative z-10 container mx-auto px-4">
+                    <div class="max-w-4xl mx-auto text-center">
+                        <div style="opacity: 1; transform: none;"><span data-slot="badge"
+                                class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent [a&amp;]:hover:bg-primary/90 mb-6 bg-blue-100 text-blue-700 hover:bg-blue-200">Trusted
+                                Postal Services Since 1971</span>
+                            <h1 class="text-4xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">Deliver
+                                with<span class="text-blue-600"> Confidence</span></h1>
+                            <p class="text-xl text-muted-foreground mb-8 leading-relaxed max-w-2xl mx-auto">Experience
+                                reliable, secure, and fast postal services that connect you to the world. From letters
+                                to packages, we handle your deliveries with care.</p>
+                            <div class="flex flex-col sm:flex-row gap-4 justify-center"><button data-slot="button"
+                                    class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive shadow-xs h-10 rounded-md has-[&gt;svg]:px-4 bg-blue-600 hover:bg-blue-700 text-white px-8">Ship
+                                    Now<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"
+                                        class="lucide lucide-arrow-right ml-2 h-5 w-5" aria-hidden="true">
+                                        <path d="M5 12h14"></path>
+                                        <path d="m12 5 7 7-7 7"></path>
+                                    </svg></button><button data-slot="button"
+                                    class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-10 rounded-md px-6 has-[&gt;svg]:px-4 border-blue-200 hover:bg-blue-50">Track
+                                    Package<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"
+                                        class="lucide lucide-map-pin ml-2 h-5 w-5" aria-hidden="true">
+                                        <path
+                                            d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0">
+                                        </path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg></button></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="py-16 bg-white border-b border-border">
+                <div class="container mx-auto px-4">
+                    <div class="max-w-4xl mx-auto">
+                        <div data-slot="card"
+                            class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-lg border-border">
+                            <div data-slot="card-content" class="p-8">
+                                <h2 class="text-2xl font-semibold text-center mb-8 text-foreground">Quick Package Lookup
+                                </h2>
+                                <div class="flex flex-col sm:flex-row gap-4"><input data-slot="input"
+                                        class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 flex h-9 w-full min-w-0 rounded-md border bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive flex-1 border-border focus:border-blue-500"
+                                        placeholder="Enter tracking number..."><button data-slot="button"
+                                        class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive text-primary-foreground shadow-xs h-9 py-2 has-[&gt;svg]:px-3 bg-blue-600 hover:bg-blue-700 px-8">Track</button>
+                                </div>
+                                <div class="flex flex-wrap gap-4 mt-6 justify-center"><button data-slot="button"
+                                        class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive dark:hover:bg-accent/50 h-8 rounded-md gap-1.5 px-3 has-[&gt;svg]:px-2.5 text-blue-600 hover:text-blue-700 hover:bg-blue-50"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-package mr-2 h-4 w-4" aria-hidden="true">
+                                            <path
+                                                d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z">
+                                            </path>
+                                            <path d="M12 22V12"></path>
+                                            <polyline points="3.29 7 12 12 20.71 7"></polyline>
+                                            <path d="m7.5 4.27 9 5.15"></path>
+                                        </svg>Ship a Package</button><button data-slot="button"
+                                        class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive dark:hover:bg-accent/50 h-8 rounded-md gap-1.5 px-3 has-[&gt;svg]:px-2.5 text-blue-600 hover:text-blue-700 hover:bg-blue-50"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-map-pin mr-2 h-4 w-4" aria-hidden="true">
+                                            <path
+                                                d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0">
+                                            </path>
+                                            <circle cx="12" cy="10" r="3"></circle>
+                                        </svg>Find Locations</button><button data-slot="button"
+                                        class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive dark:hover:bg-accent/50 h-8 rounded-md gap-1.5 px-3 has-[&gt;svg]:px-2.5 text-blue-600 hover:text-blue-700 hover:bg-blue-50"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-clock mr-2 h-4 w-4" aria-hidden="true">
+                                            <circle cx="12" cy="12" r="10"></circle>
+                                            <polyline points="12 6 12 12 16 14"></polyline>
+                                        </svg>Schedule Pickup</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="py-20 bg-gray-50">
+                <div class="container mx-auto px-4">
+                    <div class="text-center mb-16">
+                        <h2 class="text-3xl lg:text-4xl font-bold text-foreground mb-4">Shipping Services</h2>
+                        <p class="text-xl text-muted-foreground max-w-2xl mx-auto">Choose the perfect shipping solution
+                            for your needs with transparent pricing and reliable delivery.</p>
+                    </div>
+                    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                        <div style="opacity: 1; transform: none;">
+                            <div data-slot="card"
+                                class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm relative overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-border">
+                                <div data-slot="card-header"
+                                    class="@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 px-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6 pb-4">
+                                    <div class="flex items-center gap-3 mb-2">
+                                        <div class="p-2 rounded-lg bg-blue-50 text-blue-600"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-mail h-6 w-6" aria-hidden="true">
+                                                <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                                                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                                            </svg></div>
+                                        <div data-slot="card-title" class="text-xl font-semibold text-foreground">
+                                            Standard Mail</div>
+                                    </div>
+                                    <div data-slot="card-description" class="text-sm text-muted-foreground">Reliable
+                                        delivery for everyday correspondence</div>
+                                </div>
+                                <div data-slot="card-content" class="px-6">
+                                    <div class="space-y-4">
+                                        <div class="text-3xl font-bold text-blue-600">$0.68</div>
+                                        <ul class="space-y-2">
+                                            <li class="flex items-center gap-2 text-sm text-muted-foreground"><svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-circle-check-big h-4 w-4 text-green-500 flex-shrink-0"
+                                                    aria-hidden="true">
+                                                    <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                                                    <path d="m9 11 3 3L22 4"></path>
+                                                </svg>3-5 business days delivery</li>
+                                            <li class="flex items-center gap-2 text-sm text-muted-foreground"><svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-circle-check-big h-4 w-4 text-green-500 flex-shrink-0"
+                                                    aria-hidden="true">
+                                                    <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                                                    <path d="m9 11 3 3L22 4"></path>
+                                                </svg>Package tracking</li>
+                                            <li class="flex items-center gap-2 text-sm text-muted-foreground"><svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-circle-check-big h-4 w-4 text-green-500 flex-shrink-0"
+                                                    aria-hidden="true">
+                                                    <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                                                    <path d="m9 11 3 3L22 4"></path>
+                                                </svg>Insurance up to $50</li>
+                                            <li class="flex items-center gap-2 text-sm text-muted-foreground"><svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-circle-check-big h-4 w-4 text-green-500 flex-shrink-0"
+                                                    aria-hidden="true">
+                                                    <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                                                    <path d="m9 11 3 3L22 4"></path>
+                                                </svg>Online scheduling</li>
+                                        </ul><button data-slot="button"
+                                            class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-primary text-primary-foreground shadow-xs hover:bg-primary/90 h-9 px-4 py-2 has-[&gt;svg]:px-3 w-full">Choose
+                                            Plan<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-arrow-right ml-2 h-4 w-4" aria-hidden="true">
+                                                <path d="M5 12h14"></path>
+                                                <path d="m12 5 7 7-7 7"></path>
+                                            </svg></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="opacity: 1; transform: none;">
+                            <div data-slot="card"
+                                class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm relative overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-blue-600 ring-2 ring-blue-600/20">
+                                <span data-slot="badge"
+                                    class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent [a&amp;]:hover:bg-primary/90 absolute top-4 right-4 bg-blue-600 text-white">Most
+                                    Popular</span>
+                                <div data-slot="card-header"
+                                    class="@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 px-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6 pb-4">
+                                    <div class="flex items-center gap-3 mb-2">
+                                        <div class="p-2 rounded-lg bg-blue-50 text-blue-600"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-package h-6 w-6" aria-hidden="true">
+                                                <path
+                                                    d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z">
+                                                </path>
+                                                <path d="M12 22V12"></path>
+                                                <polyline points="3.29 7 12 12 20.71 7"></polyline>
+                                                <path d="m7.5 4.27 9 5.15"></path>
+                                            </svg></div>
+                                        <div data-slot="card-title" class="text-xl font-semibold text-foreground">
+                                            Priority Express</div>
+                                    </div>
+                                    <div data-slot="card-description" class="text-sm text-muted-foreground">Fast, secure
+                                        delivery for urgent items</div>
+                                </div>
+                                <div data-slot="card-content" class="px-6">
+                                    <div class="space-y-4">
+                                        <div class="text-3xl font-bold text-blue-600">$28.95</div>
+                                        <ul class="space-y-2">
+                                            <li class="flex items-center gap-2 text-sm text-muted-foreground"><svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-circle-check-big h-4 w-4 text-green-500 flex-shrink-0"
+                                                    aria-hidden="true">
+                                                    <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                                                    <path d="m9 11 3 3L22 4"></path>
+                                                </svg>1-2 business days delivery</li>
+                                            <li class="flex items-center gap-2 text-sm text-muted-foreground"><svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-circle-check-big h-4 w-4 text-green-500 flex-shrink-0"
+                                                    aria-hidden="true">
+                                                    <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                                                    <path d="m9 11 3 3L22 4"></path>
+                                                </svg>Real-time tracking</li>
+                                            <li class="flex items-center gap-2 text-sm text-muted-foreground"><svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-circle-check-big h-4 w-4 text-green-500 flex-shrink-0"
+                                                    aria-hidden="true">
+                                                    <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                                                    <path d="m9 11 3 3L22 4"></path>
+                                                </svg>Insurance up to $100</li>
+                                            <li class="flex items-center gap-2 text-sm text-muted-foreground"><svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-circle-check-big h-4 w-4 text-green-500 flex-shrink-0"
+                                                    aria-hidden="true">
+                                                    <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                                                    <path d="m9 11 3 3L22 4"></path>
+                                                </svg>Signature confirmation</li>
+                                        </ul><button data-slot="button"
+                                            class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive text-primary-foreground shadow-xs h-9 px-4 py-2 has-[&gt;svg]:px-3 w-full bg-blue-600 hover:bg-blue-700">Choose
+                                            Plan<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-arrow-right ml-2 h-4 w-4" aria-hidden="true">
+                                                <path d="M5 12h14"></path>
+                                                <path d="m12 5 7 7-7 7"></path>
+                                            </svg></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="opacity: 1; transform: none;">
+                            <div data-slot="card"
+                                class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm relative overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-border">
+                                <div data-slot="card-header"
+                                    class="@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 px-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6 pb-4">
+                                    <div class="flex items-center gap-3 mb-2">
+                                        <div class="p-2 rounded-lg bg-blue-50 text-blue-600"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-truck h-6 w-6" aria-hidden="true">
+                                                <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2">
+                                                </path>
+                                                <path d="M15 18H9"></path>
+                                                <path
+                                                    d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14">
+                                                </path>
+                                                <circle cx="17" cy="18" r="2"></circle>
+                                                <circle cx="7" cy="18" r="2"></circle>
+                                            </svg></div>
+                                        <div data-slot="card-title" class="text-xl font-semibold text-foreground">Ground
+                                            Shipping</div>
+                                    </div>
+                                    <div data-slot="card-description" class="text-sm text-muted-foreground">
+                                        Cost-effective solution for larger packages</div>
+                                </div>
+                                <div data-slot="card-content" class="px-6">
+                                    <div class="space-y-4">
+                                        <div class="text-3xl font-bold text-blue-600">$9.65</div>
+                                        <ul class="space-y-2">
+                                            <li class="flex items-center gap-2 text-sm text-muted-foreground"><svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-circle-check-big h-4 w-4 text-green-500 flex-shrink-0"
+                                                    aria-hidden="true">
+                                                    <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                                                    <path d="m9 11 3 3L22 4"></path>
+                                                </svg>2-8 business days delivery</li>
+                                            <li class="flex items-center gap-2 text-sm text-muted-foreground"><svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-circle-check-big h-4 w-4 text-green-500 flex-shrink-0"
+                                                    aria-hidden="true">
+                                                    <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                                                    <path d="m9 11 3 3L22 4"></path>
+                                                </svg>Package tracking</li>
+                                            <li class="flex items-center gap-2 text-sm text-muted-foreground"><svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-circle-check-big h-4 w-4 text-green-500 flex-shrink-0"
+                                                    aria-hidden="true">
+                                                    <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                                                    <path d="m9 11 3 3L22 4"></path>
+                                                </svg>Insurance up to $100</li>
+                                            <li class="flex items-center gap-2 text-sm text-muted-foreground"><svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-circle-check-big h-4 w-4 text-green-500 flex-shrink-0"
+                                                    aria-hidden="true">
+                                                    <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                                                    <path d="m9 11 3 3L22 4"></path>
+                                                </svg>Free pickup</li>
+                                        </ul><button data-slot="button"
+                                            class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-primary text-primary-foreground shadow-xs hover:bg-primary/90 h-9 px-4 py-2 has-[&gt;svg]:px-3 w-full">Choose
+                                            Plan<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-arrow-right ml-2 h-4 w-4" aria-hidden="true">
+                                                <path d="M5 12h14"></path>
+                                                <path d="m12 5 7 7-7 7"></path>
+                                            </svg></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="py-20 bg-white">
+                <div class="container mx-auto px-4">
+                    <div class="text-center mb-16">
+                        <h2 class="text-3xl lg:text-4xl font-bold text-foreground mb-4">Why Choose Our Services</h2>
+                        <p class="text-xl text-muted-foreground max-w-2xl mx-auto">We're committed to providing
+                            exceptional postal services with modern technology and traditional reliability.</p>
+                    </div>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+                        <div class="group" style="opacity: 1; transform: none;">
+                            <div data-slot="card"
+                                class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm h-full transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-border">
+                                <div data-slot="card-content" class="p-6">
+                                    <div class="flex flex-col items-center text-center space-y-4">
+                                        <div
+                                            class="p-3 rounded-full bg-blue-50 text-blue-600 group-hover:bg-blue-100 transition-colors">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-shield h-8 w-8" aria-hidden="true">
+                                                <path
+                                                    d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z">
+                                                </path>
+                                            </svg></div>
+                                        <h3 class="text-xl font-semibold text-foreground">Secure &amp; Reliable</h3>
+                                        <p class="text-muted-foreground leading-relaxed">Your packages are protected
+                                            with advanced security measures and comprehensive insurance coverage.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="group" style="opacity: 1; transform: none;">
+                            <div data-slot="card"
+                                class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm h-full transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-border">
+                                <div data-slot="card-content" class="p-6">
+                                    <div class="flex flex-col items-center text-center space-y-4">
+                                        <div
+                                            class="p-3 rounded-full bg-blue-50 text-blue-600 group-hover:bg-blue-100 transition-colors">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-globe h-8 w-8" aria-hidden="true">
+                                                <circle cx="12" cy="12" r="10"></circle>
+                                                <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                                                <path d="M2 12h20"></path>
+                                            </svg></div>
+                                        <h3 class="text-xl font-semibold text-foreground">Global Network</h3>
+                                        <p class="text-muted-foreground leading-relaxed">Reach anywhere in the world
+                                            with our extensive international shipping network and partnerships.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="group" style="opacity: 1; transform: none;">
+                            <div data-slot="card"
+                                class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm h-full transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-border">
+                                <div data-slot="card-content" class="p-6">
+                                    <div class="flex flex-col items-center text-center space-y-4">
+                                        <div
+                                            class="p-3 rounded-full bg-blue-50 text-blue-600 group-hover:bg-blue-100 transition-colors">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-clock h-8 w-8" aria-hidden="true">
+                                                <circle cx="12" cy="12" r="10"></circle>
+                                                <polyline points="12 6 12 12 16 14"></polyline>
+                                            </svg></div>
+                                        <h3 class="text-xl font-semibold text-foreground">Real-time Tracking</h3>
+                                        <p class="text-muted-foreground leading-relaxed">Monitor your shipments every
+                                            step of the way with detailed tracking and delivery notifications.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="group" style="opacity: 1; transform: none;">
+                            <div data-slot="card"
+                                class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm h-full transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-border">
+                                <div data-slot="card-content" class="p-6">
+                                    <div class="flex flex-col items-center text-center space-y-4">
+                                        <div
+                                            class="p-3 rounded-full bg-blue-50 text-blue-600 group-hover:bg-blue-100 transition-colors">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-users h-8 w-8" aria-hidden="true">
+                                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                                <circle cx="9" cy="7" r="4"></circle>
+                                                <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                            </svg></div>
+                                        <h3 class="text-xl font-semibold text-foreground">24/7 Support</h3>
+                                        <p class="text-muted-foreground leading-relaxed">Our dedicated customer service
+                                            team is available around the clock to assist with your needs.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="py-20 bg-blue-600 text-white">
+                <div class="container mx-auto px-4">
+                    <div class="grid md:grid-cols-4 gap-8 text-center">
+                        <div>
+                            <div class="text-4xl font-bold mb-2">50M+</div>
+                            <div class="text-blue-100">Packages Delivered</div>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-bold mb-2">99.9%</div>
+                            <div class="text-blue-100">Delivery Success Rate</div>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-bold mb-2">24/7</div>
+                            <div class="text-blue-100">Customer Support</div>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-bold mb-2">200+</div>
+                            <div class="text-blue-100">Countries Served</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="py-20 bg-gradient-to-r from-blue-600 to-blue-700 text-white">
+                <div class="container mx-auto px-4 text-center">
+                    <h2 class="text-3xl lg:text-4xl font-bold mb-4">Ready to Ship?</h2>
+                    <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">Join millions of satisfied customers who
+                        trust us with their most important deliveries.</p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center"><button data-slot="button"
+                            class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive shadow-xs h-10 rounded-md has-[&gt;svg]:px-4 bg-white text-blue-600 hover:bg-gray-100 px-8">Get
+                            Started Today</button><button data-slot="button"
+                            class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-10 rounded-md px-6 has-[&gt;svg]:px-4 border-white text-white hover:bg-white hover:text-blue-600">Learn
+                            More</button></div>
+                </div>
+            </section>
+            <footer class="bg-gray-900 text-white py-16">
+                <div class="container mx-auto px-4">
+                    <div class="grid md:grid-cols-4 gap-8">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4">Postal Services</h3>
+                            <p class="text-gray-400 mb-4">Connecting communities worldwide with reliable postal and
+                                shipping services.</p>
+                            <div class="flex gap-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="lucide lucide-star h-5 w-5 text-yellow-400" aria-hidden="true">
+                                    <path
+                                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-star h-5 w-5 text-yellow-400"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-star h-5 w-5 text-yellow-400"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-star h-5 w-5 text-yellow-400"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                                    </path>
+                                </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-star h-5 w-5 text-yellow-400"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                                    </path>
+                                </svg></div>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold mb-4">Services</h4>
+                            <ul class="space-y-2 text-gray-400">
+                                <li>Standard Mail</li>
+                                <li>Priority Express</li>
+                                <li>Ground Shipping</li>
+                                <li>International</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold mb-4">Support</h4>
+                            <ul class="space-y-2 text-gray-400">
+                                <li>Track Package</li>
+                                <li>Find Locations</li>
+                                <li>Customer Service</li>
+                                <li>Help Center</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold mb-4">Company</h4>
+                            <ul class="space-y-2 text-gray-400">
+                                <li>About Us</li>
+                                <li>Careers</li>
+                                <li>Press</li>
+                                <li>Contact</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                        <p>© 2024 Postal Services. All rights reserved.</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
