@@ -5,33 +5,105 @@
 
 .hero {
   position: relative;
-  padding: 40px 24px;
-  min-height: 300px;
+  padding: clamp(4rem, 8vw, 8rem) var(--space-6);
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(135deg, var(--background-color) 0%, var(--neutral-100) 100%);
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 20%, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.hero > div {
+  max-width: var(--container-lg);
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 .hero h1 {
-  max-width: 1200px;
+  font-size: var(--text-5xl);
+  font-weight: var(--font-weight-extralight);
+  letter-spacing: var(--letter-spacing-tighter);
+  color: var(--text-primary);
+  line-height: var(--line-height-tight);
+  margin-bottom: var(--space-6);
+  max-width: none;
+}
+
+.hero p {
+  font-size: var(--text-lg);
+  color: var(--text-secondary);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--space-8);
+  max-width: 60ch;
   margin-left: auto;
   margin-right: auto;
-  color: var(--background-color);
+}
+
+.hero .button-container {
+  display: flex;
+  gap: var(--space-4);
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: var(--space-8);
+}
+
+.hero .button {
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-lg);
+  font-weight: var(--font-weight-medium);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+}
+
+.hero .button.primary {
+  background: var(--primary-color);
+  color: var(--text-on-primary);
+}
+
+.hero .button.primary:hover {
+  background: var(--primary-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-lg);
+}
+
+.hero .button.secondary {
+  background: transparent;
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.hero .button.secondary:hover {
+  background: var(--primary-color);
+  color: var(--text-on-primary);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-lg);
 }
 
 .hero picture {
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-  object-fit: cover;
-  box-sizing: border-box;
+  display: none; /* Remove background images for minimal design */
 }
 
-.hero img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-
-@media (width >= 900px) {
+@media (width >= 768px) {
   .hero {
-    padding: 40px 32px;
+    padding: clamp(6rem, 10vw, 12rem) var(--space-8);
+  }
+  
+  .hero .button-container {
+    flex-wrap: nowrap;
   }
 }

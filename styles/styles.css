@@ -5,64 +5,52 @@
  */
 
 :root {
-  /* === POSTAL COLOR PALETTE === */
-  /* Primary Colors - Postal Blues */
-  --postal-blue-900: #0c2d5c;
-  --postal-blue-800: #1e3a72;
-  --postal-blue-700: #2d4a87;
-  --postal-blue-600: #3b5a9c;
-  --postal-blue-500: #4a6cb1;
-  --postal-blue-400: #6b8bc7;
-  --postal-blue-300: #8ba9dc;
-  --postal-blue-200: #abc7f1;
-  --postal-blue-100: #d5e5ff;
-  --postal-blue-50: #f0f7ff;
-
-  /* Secondary Colors - Postal Red */
-  --postal-red-700: #b91c1c;
-  --postal-red-600: #dc2626;
-  --postal-red-500: #ef4444;
-  --postal-red-400: #f87171;
-  --postal-red-300: #fca5a5;
-  --postal-red-200: #fecaca;
-  --postal-red-100: #fee2e2;
-  --postal-red-50: #fef2f2;
-
-  /* Neutral Colors */
-  --neutral-900: #111827;
-  --neutral-800: #1f2937;
-  --neutral-700: #374151;
-  --neutral-600: #4b5563;
-  --neutral-500: #6b7280;
-  --neutral-400: #9ca3af;
-  --neutral-300: #d1d5db;
-  --neutral-200: #e5e7eb;
-  --neutral-100: #f3f4f6;
-  --neutral-50: #f9fafb;
+  /* === MODERN NEUTRAL PALETTE === */
+  /* Base Neutrals */
   --neutral-white: #ffffff;
+  --neutral-50: #fafafa;
+  --neutral-100: #f5f5f5;
+  --neutral-200: #e5e5e5;
+  --neutral-300: #d4d4d4;
+  --neutral-400: #a3a3a3;
+  --neutral-500: #737373;
+  --neutral-600: #525252;
+  --neutral-700: #404040;
+  --neutral-800: #262626;
+  --neutral-900: #171717;
+  
+  /* Accent Colors */
+  --accent-blue: #3b82f6;
+  --accent-green: #10b981;
+  --accent-purple: #8b5cf6;
+  --accent-orange: #f59e0b;
 
   /* Success, Warning, Error Colors */
-  --success-600: #059669;
-  --success-500: #10b981;
-  --success-100: #d1fae5;
-  --warning-600: #d97706;
-  --warning-500: #f59e0b;
+  --success-600: var(--accent-green);
+  --success-500: #22c55e;
+  --success-100: #dcfce7;
+  --warning-600: var(--accent-orange);
+  --warning-500: #eab308;
   --warning-100: #fef3c7;
-  --error-600: var(--postal-red-600);
-  --error-500: var(--postal-red-500);
-  --error-100: var(--postal-red-100);
+  --error-600: #dc2626;
+  --error-500: #ef4444;
+  --error-100: #fee2e2;
 
   /* === SEMANTIC COLOR ASSIGNMENTS === */
-  --primary-color: var(--postal-blue-600);
-  --primary-hover: var(--postal-blue-700);
-  --primary-light: var(--postal-blue-100);
+  --primary-color: var(--neutral-800);
+  --primary-hover: var(--neutral-900);
+  --primary-light: var(--neutral-100);
   
-  --secondary-color: var(--postal-red-600);
-  --secondary-hover: var(--postal-red-700);
-  --secondary-light: var(--postal-red-100);
+  --secondary-color: var(--neutral-600);
+  --secondary-hover: var(--neutral-700);
+  --secondary-light: var(--neutral-50);
 
-  --background-color: var(--neutral-white);
-  --surface-color: var(--neutral-50);
+  --accent-color: var(--accent-blue);
+  --accent-hover: #2563eb;
+  --accent-light: #dbeafe;
+
+  --background-color: var(--neutral-50);
+  --surface-color: var(--neutral-white);
   --card-background: var(--neutral-white);
   
   --text-primary: var(--neutral-900);
@@ -71,7 +59,7 @@
   --text-on-primary: var(--neutral-white);
   
   --border-color: var(--neutral-200);
-  --border-focus: var(--primary-color);
+  --border-focus: var(--accent-color);
   --border-error: var(--error-500);
 
   /* === TYPOGRAPHY SYSTEM === */
@@ -80,13 +68,23 @@
   --font-heading: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
 
-  /* Font Weights */
+  /* Enhanced Font Weights */
+  --font-weight-extralight: 200;
   --font-weight-light: 300;
   --font-weight-normal: 400;
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
   --font-weight-extrabold: 800;
+  --font-weight-black: 900;
+
+  /* Letter Spacing */
+  --letter-spacing-tighter: -0.05em;
+  --letter-spacing-tight: -0.025em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.025em;
+  --letter-spacing-wider: 0.05em;
+  --letter-spacing-widest: 0.1em;
 
   /* Font Sizes - Fluid Typography */
   --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
@@ -101,11 +99,16 @@
   --text-6xl: clamp(4rem, 3rem + 5vw, 6rem);
 
   /* Line Heights */
-  --leading-tight: 1.25;
-  --leading-snug: 1.375;
-  --leading-normal: 1.5;
-  --leading-relaxed: 1.625;
-  --leading-loose: 2;
+  --line-height-tight: 1.25;
+  --line-height-snug: 1.375;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.625;
+  --line-height-loose: 2;
+  --leading-tight: var(--line-height-tight);
+  --leading-snug: var(--line-height-snug);
+  --leading-normal: var(--line-height-normal);
+  --leading-relaxed: var(--line-height-relaxed);
+  --leading-loose: var(--line-height-loose);
 
   /* === SPACING SYSTEM === */
   --space-0: 0;

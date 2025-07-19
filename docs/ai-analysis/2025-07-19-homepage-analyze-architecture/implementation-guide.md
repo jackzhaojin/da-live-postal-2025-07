@@ -15,9 +15,6 @@ Step-by-step instructions for transforming the postal-themed EDS site to a moder
 # Navigate to project
 cd /mnt/c/code/da-live-postal-2025-07
 
-# Install dependencies
-npm install
-
 # Start development server
 aem up
 
