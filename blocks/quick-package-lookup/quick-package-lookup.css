@@ -7,6 +7,21 @@
   max-width: 600px;
 }
 
+/* Wider at larger desktop resolutions to match Vercel design */
+@media (width >= 1200px) {
+  .quick-package-lookup {
+    max-width: 800px;
+    padding: 2.5rem;
+  }
+}
+
+@media (width >= 1400px) {
+  .quick-package-lookup {
+    max-width: 900px;
+    padding: 3rem;
+  }
+}
+
 .quick-package-lookup .lookup-container {
   text-align: center;
 }
