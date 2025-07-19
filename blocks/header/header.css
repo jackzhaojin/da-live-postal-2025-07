@@ -36,9 +36,12 @@ header nav[aria-expanded='true'] {
     'sections sections' 1fr / auto 1fr;
   overflow-y: auto;
   min-height: 100vh;
-  background: var(--color-white);
+  background: #ffffff;
   z-index: 9999;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 header nav p {
@@ -157,6 +160,8 @@ header nav[aria-expanded='true'] .nav-sections {
   visibility: visible;
   align-self: start;
   margin-top: 2rem;
+  background: #ffffff;
+  padding: 1rem;
 }
 
 header nav .nav-sections ul {
@@ -209,7 +214,7 @@ header nav .nav-sections ul > li.nav-drop[aria-expanded="true"] > p::after {
 /* Dropdown sub-menus - MOBILE */
 header nav .nav-sections ul > li > ul {
   margin-top: 0.5rem;
-  background: var(--color-white);
+  background: #ffffff;
   border: 1px solid #e5e7eb;
   border-radius: 8px;
   padding: 0.5rem;
@@ -298,7 +303,9 @@ header nav .nav-tools {
   header nav[aria-expanded='true'] {
     min-height: 0;
     overflow: visible;
-    background: transparent;
+    background: #ffffff;
+    position: relative;
+    width: auto;
   }
 
   header nav .nav-hamburger {
@@ -315,6 +322,8 @@ header nav .nav-tools {
   header nav[aria-expanded='true'] .nav-sections {
     align-self: unset;
     margin-top: 0;
+    background: #ffffff;
+    padding: 0;
   }
 
   header nav .nav-sections ul {
@@ -349,7 +358,7 @@ header nav .nav-tools {
     top: 100%;
     left: 0;
     min-width: 280px;
-    background: var(--color-white);
+    background: #ffffff;
     border: 1px solid #e5e7eb;
     border-radius: 8px;
     box-shadow: 0 10px 25px rgb(0 0 0 / 15%);
