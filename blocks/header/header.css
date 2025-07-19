@@ -1,10 +1,10 @@
 header {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border-color);
+  background: var(--color-white);
+  border-bottom: 1px solid #e5e7eb;
   position: sticky;
   top: 0;
   z-index: 1000;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .header .nav-wrapper {
@@ -26,11 +26,19 @@ header {
 }
 
 .header .nav-brand a {
-  font-size: var(--text-xl);
-  font-weight: var(--font-weight-bold);
-  color: var(--text-primary);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
   text-decoration: none;
-  letter-spacing: var(--letter-spacing-tight);
+  letter-spacing: -0.025em;
+}
+
+.header .nav-brand a em {
+  font-style: normal;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .header .nav-sections {
@@ -275,14 +283,113 @@ header nav[aria-expanded='true'] .nav-sections {
   align-self: start;
 }
 
+/* Modern postal service navigation styles */
 header nav .nav-sections ul {
   list-style: none;
   padding-left: 0;
-  font-size: var(--text-sm);
+  font-size: 0.875rem;
+  margin: 0;
 }
 
 header nav .nav-sections ul > li {
   font-weight: 500;
+  position: relative;
+}
+
+header nav .nav-sections ul > li > p {
+  margin: 0;
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  font-size: 0.875rem;
+}
+
+header nav .nav-sections ul > li:hover > p {
+  color: var(--color-primary);
+  background: rgba(59, 130, 246, 0.05);
+}
+
+header nav .nav-sections ul > li.nav-drop > p::after {
+  content: '▼';
+  font-size: 0.75rem;
+  margin-left: 0.5rem;
+  transition: transform 0.2s ease;
+}
+
+header nav .nav-sections ul > li.nav-drop[aria-expanded="true"] > p::after {
+  transform: rotate(180deg);
+}
+
+/* Dropdown menus */
+header nav .nav-sections ul > li > ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 250px;
+  background: var(--color-white);
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 1001;
+  padding: 0.5rem 0;
+}
+
+header nav .nav-sections ul > li[aria-expanded="true"] > ul {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+header nav .nav-sections ul > li > ul > li {
+  border-bottom: 1px solid #f3f4f6;
+}
+
+header nav .nav-sections ul > li > ul > li:last-child {
+  border-bottom: none;
+}
+
+header nav .nav-sections ul > li > ul > li > a,
+header nav .nav-sections ul > li > ul > li > p {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: var(--color-text);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+header nav .nav-sections ul > li > ul > li > a:hover,
+header nav .nav-sections ul > li > ul > li > p:hover {
+  background: rgba(59, 130, 246, 0.05);
+  color: var(--color-primary);
+}
+
+header nav .nav-sections ul > li > ul > li .button-container .button {
+  margin: 0;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: var(--color-primary);
+  color: var(--color-white);
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+header nav .nav-sections ul > li > ul > li .button-container .button:hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-1px);
 }
 
 @media (width >= 900px) {
@@ -299,8 +406,12 @@ header nav .nav-sections ul > li {
   header nav .nav-sections ul {
     display: flex;
     align-items: center;
-    gap: 24px;
+    gap: 0;
     margin: 0;
+  }
+
+  header nav .nav-sections ul > li {
+    position: relative;
   }
 }
 

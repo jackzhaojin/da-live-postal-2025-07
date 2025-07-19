@@ -200,14 +200,37 @@ export default async function decorate(block) {
   const navSections = nav.querySelector('.nav-sections');
   if (navSections) {
     navSections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navSection) => {
-      if (navSection.querySelector('ul')) navSection.classList.add('nav-drop');
-      navSection.addEventListener('click', () => {
+      if (navSection.querySelector('ul')) {
+        navSection.classList.add('nav-drop');
+        
+        // Add hover functionality for desktop
+        if (isDesktop.matches) {
+          navSection.addEventListener('mouseenter', () => {
+            toggleAllNavSections(navSections);
+            navSection.setAttribute('aria-expanded', 'true');
+          });
+          
+          navSection.addEventListener('mouseleave', () => {
+            navSection.setAttribute('aria-expanded', 'false');
+          });
+        }
+      }
+      
+      navSection.addEventListener('click', (e) => {
+        e.preventDefault();
         if (isDesktop.matches) {
           const expanded = navSection.getAttribute('aria-expanded') === 'true';
           toggleAllNavSections(navSections);
           navSection.setAttribute('aria-expanded', expanded ? 'false' : 'true');
         }
       });
+    });
+    
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!navSections.contains(e.target) && isDesktop.matches) {
+        toggleAllNavSections(navSections, false);
+      }
     });
   }
 
