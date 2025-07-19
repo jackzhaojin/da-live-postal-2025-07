@@ -203,25 +203,34 @@ export default async function decorate(block) {
       if (navSection.querySelector('ul')) {
         navSection.classList.add('nav-drop');
         
-        // Add hover functionality for desktop
-        if (isDesktop.matches) {
-          navSection.addEventListener('mouseenter', () => {
-            toggleAllNavSections(navSections);
+        // Enhanced hover functionality for desktop
+        navSection.addEventListener('mouseenter', () => {
+          if (isDesktop.matches) {
+            toggleAllNavSections(navSections, false);
             navSection.setAttribute('aria-expanded', 'true');
-          });
-          
-          navSection.addEventListener('mouseleave', () => {
+          }
+        });
+        
+        navSection.addEventListener('mouseleave', () => {
+          if (isDesktop.matches) {
             navSection.setAttribute('aria-expanded', 'false');
-          });
-        }
+          }
+        });
       }
       
       navSection.addEventListener('click', (e) => {
-        e.preventDefault();
-        if (isDesktop.matches) {
+        if (!isDesktop.matches) {
+          // Mobile: toggle dropdown
           const expanded = navSection.getAttribute('aria-expanded') === 'true';
-          toggleAllNavSections(navSections);
           navSection.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+        } else {
+          // Desktop: only prevent default if it's a dropdown
+          if (navSection.querySelector('ul')) {
+            e.preventDefault();
+            const expanded = navSection.getAttribute('aria-expanded') === 'true';
+            toggleAllNavSections(navSections, false);
+            navSection.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+          }
         }
       });
     });
@@ -231,6 +240,11 @@ export default async function decorate(block) {
       if (!navSections.contains(e.target) && isDesktop.matches) {
         toggleAllNavSections(navSections, false);
       }
+    });
+    
+    // Initialize all dropdowns as closed
+    navSections.querySelectorAll('.nav-drop').forEach((drop) => {
+      drop.setAttribute('aria-expanded', 'false');
     });
   }
 
