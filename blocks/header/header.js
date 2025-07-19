@@ -219,12 +219,17 @@ export default async function decorate(block) {
       }
       
       navSection.addEventListener('click', (e) => {
+        // Allow links to work normally - don't prevent default on link clicks
+        if (e.target.tagName === 'A' || e.target.closest('a')) {
+          return; // Let the link work normally
+        }
+        
         if (!isDesktop.matches) {
           // Mobile: toggle dropdown
           const expanded = navSection.getAttribute('aria-expanded') === 'true';
           navSection.setAttribute('aria-expanded', expanded ? 'false' : 'true');
         } else {
-          // Desktop: only prevent default if it's a dropdown
+          // Desktop: only prevent default if it's a dropdown and not clicking on a link
           if (navSection.querySelector('ul')) {
             e.preventDefault();
             const expanded = navSection.getAttribute('aria-expanded') === 'true';
