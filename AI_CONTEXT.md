@@ -104,6 +104,13 @@ export default function decorate(block) {
 - Screen reader compatibility
 - Color contrast compliance
 
+## Local Development
+**Quick Start**: To run the project locally on port 3000:
+```bash
+aem up
+```
+No need for npm install first - AEM CLI handles everything!
+
 ## Development Workflow
 1. Create block folder structure
 2. Implement HTML structure in document

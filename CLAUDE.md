@@ -23,9 +23,14 @@ The `/docs` directory contains complete project documentation including:
 
 ## Development Commands
 
+**Quick Start**: To run the project locally on port 3000:
 ```bash
-# Setup
-npm install
+aem up
+```
+No need for npm install first - AEM CLI handles everything!
+
+```bash
+# Setup (optional, only if aem cli is missing - aem isn't found)
 sudo npm install -g @adobe/aem-cli
 
 # Development server

@@ -74,6 +74,13 @@ export default function decorate(block) {
 - Mobile-first responsive design
 - Semantic HTML structure
 
+## Local Development
+**Quick Start**: To run the project locally on port 3000:
+```bash
+aem up
+```
+No need for npm install first - AEM CLI handles everything!
+
 ## Testing Approach
 - Test in da.live preview environment
 - Validate HTML semantics

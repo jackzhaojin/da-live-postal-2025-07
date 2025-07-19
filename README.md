@@ -66,11 +66,16 @@ This specific repo has been _slightly_ modified to be compatible with DA's live 
 ### 3. Local development
 1. Clone your new repo to your computer.
 1. Install the AEM CLI using your terminal: `sudo npm install -g @adobe/aem-cli`
-1. Start the AEM CLI: `aem up`.
+1. **Start local development server**: `aem up` (runs on port 3000 - no need for npm install first!)
 1. Open the `{repo}` folder in your favorite code editor and build something.
 1. **Recommended:** Install common npm packages like linting and testing: `npm i`.
 
 ## 🚀 Development Commands
+
+**Quick Start**: To run the project locally on port 3000:
+```bash
+aem up
+```
 
 Once you have the project set up locally, use these npm scripts for development:
 
