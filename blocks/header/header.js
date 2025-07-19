@@ -29,10 +29,9 @@ function closeOnFocusLost(e) {
     if (navSectionExpanded && isDesktop.matches) {
       // eslint-disable-next-line no-use-before-define
       toggleAllNavSections(navSections, false);
-    } else if (!isDesktop.matches) {
-      // eslint-disable-next-line no-use-before-define
-      toggleMenu(nav, navSections, false);
     }
+    // Don't close mobile navigation on focus lost - only close on explicit
+    // hamburger click or escape
   }
 }
 
@@ -57,7 +56,7 @@ function focusNavSection() {
  * @param {Boolean} expanded Whether the element should be expanded or collapsed
  */
 function toggleAllNavSections(sections, expanded = false) {
-  sections.querySelectorAll('.nav-sections .default-content-wrapper > ul > li').forEach((section) => {
+  sections.querySelectorAll('.nav-drop').forEach((section) => {
     section.setAttribute('aria-expanded', expanded);
   });
 }
@@ -73,7 +72,13 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
   const button = nav.querySelector('.nav-hamburger button');
   document.body.style.overflowY = (expanded || isDesktop.matches) ? '' : 'hidden';
   nav.setAttribute('aria-expanded', expanded ? 'false' : 'true');
-  toggleAllNavSections(navSections, expanded || isDesktop.matches ? 'false' : 'true');
+
+  // For mobile, always start with dropdowns collapsed
+  if (!isDesktop.matches) {
+    toggleAllNavSections(navSections, false);
+  } else {
+    toggleAllNavSections(navSections, expanded || isDesktop.matches ? 'false' : 'true');
+  }
   button.setAttribute('aria-label', expanded ? 'Open navigation' : 'Close navigation');
   // enable nav dropdown keyboard accessibility
   const navDrops = navSections.querySelectorAll('.nav-drop');
@@ -200,15 +205,70 @@ export default async function decorate(block) {
   const navSections = nav.querySelector('.nav-sections');
   if (navSections) {
     navSections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navSection) => {
-      if (navSection.querySelector('ul')) navSection.classList.add('nav-drop');
-      navSection.addEventListener('click', () => {
-        if (isDesktop.matches) {
-          const expanded = navSection.getAttribute('aria-expanded') === 'true';
-          toggleAllNavSections(navSections);
-          navSection.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+      if (navSection.querySelector('ul')) {
+        navSection.classList.add('nav-drop');
+
+        // Enhanced hover functionality for desktop
+        navSection.addEventListener('mouseenter', () => {
+          if (isDesktop.matches) {
+            toggleAllNavSections(navSections, false);
+            navSection.setAttribute('aria-expanded', 'true');
+          }
+        });
+
+        navSection.addEventListener('mouseleave', () => {
+          if (isDesktop.matches) {
+            navSection.setAttribute('aria-expanded', 'false');
+          }
+        });
+
+        // Add specific click handler for the dropdown trigger (p element)
+        const dropdownTrigger = navSection.querySelector('p');
+        if (dropdownTrigger) {
+          dropdownTrigger.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+
+            if (!isDesktop.matches) {
+              // Mobile: toggle this specific dropdown
+              const expanded = navSection.getAttribute('aria-expanded') === 'true';
+              navSection.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+            } else {
+              // Desktop: handle dropdown toggle
+              const expanded = navSection.getAttribute('aria-expanded') === 'true';
+              toggleAllNavSections(navSections, false);
+              navSection.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+            }
+          });
+        }
+      }
+
+      // Allow links to work normally - simplified click handler for links only
+      navSection.addEventListener('click', (e) => {
+        if (e.target.tagName === 'A' || e.target.closest('a')) {
+          // Let the link work normally
         }
       });
     });
+
+    // Close dropdowns when clicking outside (desktop only)
+    document.addEventListener('click', (e) => {
+      if (!navSections.contains(e.target) && isDesktop.matches) {
+        toggleAllNavSections(navSections, false);
+      }
+    });
+
+    // Initialize all dropdowns as closed
+    navSections.querySelectorAll('.nav-drop').forEach((drop) => {
+      drop.setAttribute('aria-expanded', 'false');
+    });
+
+    // Ensure mobile dropdowns start collapsed when menu opens
+    if (!isDesktop.matches) {
+      navSections.querySelectorAll('.nav-drop').forEach((drop) => {
+        drop.setAttribute('aria-expanded', 'false');
+      });
+    }
   }
 
   const navTools = nav.querySelector('.nav-tools');
@@ -225,7 +285,10 @@ export default async function decorate(block) {
   hamburger.innerHTML = `<button type="button" aria-controls="nav" aria-label="Open navigation">
       <span class="nav-hamburger-icon"></span>
     </button>`;
-  hamburger.addEventListener('click', () => toggleMenu(nav, navSections));
+  hamburger.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleMenu(nav, navSections);
+  });
   nav.prepend(hamburger);
   nav.setAttribute('aria-expanded', 'false');
   // prevent mobile nav behavior on window resize

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hero Block Test</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../blocks/hero/hero.css">
+    <style>
+        /* Basic test styles */
+        body { margin: 0; font-family: Arial, sans-serif; }
+        .hero-container { margin: 2rem 0; }
+    </style>
+</head>
+<body>
+    <h1>Hero Block Tests</h1>
+    
+    <h2>Default Hero</h2>
+    <div class="hero-container">
+        <div class="hero">
+            <div>
+                <div>
+                    <h1>Default Hero Title</h1>
+                    <p>This is a default hero without any variations.</p>
+                    <p><a href="#">Primary Button</a></p>
+                    <p><a href="#">Secondary Button</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <h2>Checker Grid Hero</h2>
+    <div class="hero-container">
+        <div class="hero">
+            <div>
+                <div>
+                    <p>metadata</p>
+                    <p>variation:checker-grid</p>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <h1>Checker Grid Hero Title</h1>
+                    <blockquote>
+                        <p>Subtitle or tagline</p>
+                    </blockquote>
+                    <p>This hero has the checker-grid variation applied with the animated background pattern.</p>
+                    <p><a href="#">Ship Now</a></p>
+                    <p><a href="#">Track Package</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module">
+        import decorate from '../blocks/hero/hero.js';
+        
+        // Initialize all hero blocks
+        document.querySelectorAll('.hero').forEach(block => {
+            decorate(block);
+        });
+    </script>
+</body>
+</html>

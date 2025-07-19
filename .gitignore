@@ -7,3 +7,63 @@ helix-importer-ui
 .DS_Store
 *.bak
 .idea
+
+
+# local-only
+local-only
+
+# IDE and Editor files
+## Visual Studio Code
+.vscode/
+*.code-workspace
+
+## IntelliJ IDEA / WebStorm / PyCharm
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+
+
+# Development context files
+/*CONTEXT*.md
+ai-docs
+/*AGENT*.md  
+/*CLAUDE*.md
+/*PRD*.md
+/.clauderc
+/*TECHNICAL*.md
+.github/*copilot*.md
+.claude/settings.local.json
+
+## Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+## Vim
+*.swp
+*.swo
+*~
+
+## Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+## Atom
+.atom/
+
+## VSCode extensions
+.vscode/extensions/
+
+## Temporary files
+*.tmp
+*.temp
+.tmp/
+.temp/

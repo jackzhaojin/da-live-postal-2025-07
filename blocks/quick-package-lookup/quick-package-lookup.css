@@ -1,0 +1,160 @@
+.quick-package-lookup {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgb(0 0 0 / 10%);
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 600px;
+}
+
+.quick-package-lookup .lookup-container {
+  text-align: center;
+}
+
+.quick-package-lookup .lookup-title {
+  color: var(--text-color, #1a1a1a);
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin: 0 0 1.5rem;
+  line-height: 1.2;
+}
+
+.quick-package-lookup .lookup-form {
+  margin-bottom: 2rem;
+}
+
+.quick-package-lookup .input-wrapper {
+  display: flex;
+  gap: 0;
+  max-width: 400px;
+  margin: 0 auto;
+  border: 2px solid #e5e5e5;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: border-color 0.2s ease;
+}
+
+.quick-package-lookup .input-wrapper:focus-within {
+  border-color: var(--link-color, #4A90E2);
+}
+
+.quick-package-lookup .lookup-input {
+  flex: 1;
+  padding: 0.875rem 1rem;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  color: var(--text-color, #1a1a1a);
+  background: transparent;
+}
+
+.quick-package-lookup .lookup-input::placeholder {
+  color: #999;
+}
+
+.quick-package-lookup .lookup-submit {
+  padding: 0.875rem 1.5rem;
+  background: var(--link-color, #4A90E2);
+  color: white;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.quick-package-lookup .lookup-submit:hover {
+  background: var(--link-hover-color, #357ABD);
+}
+
+.quick-package-lookup .lookup-submit:active {
+  background: var(--link-active-color, #2E6A9E);
+}
+
+.quick-package-lookup .lookup-actions {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.quick-package-lookup .action-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.quick-package-lookup .action-icon {
+  font-size: 1.125rem;
+  opacity: 0.8;
+}
+
+.quick-package-lookup .action-link {
+  color: var(--link-color, #4A90E2);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.quick-package-lookup .action-link:hover {
+  color: var(--link-hover-color, #357ABD);
+  text-decoration: underline;
+}
+
+/* Mobile responsive design */
+@media (width < 768px) {
+  .quick-package-lookup {
+    padding: 1.5rem;
+    margin: 1rem;
+    border-radius: 8px;
+  }
+  
+  .quick-package-lookup .lookup-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .quick-package-lookup .input-wrapper {
+    max-width: 100%;
+  }
+  
+  .quick-package-lookup .lookup-input {
+    font-size: 16px; /* Prevent zoom on iOS */
+  }
+  
+  .quick-package-lookup .lookup-actions {
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .quick-package-lookup .action-item {
+    justify-content: center;
+  }
+}
+
+/* Focus styles for accessibility */
+.quick-package-lookup .lookup-input:focus,
+.quick-package-lookup .lookup-submit:focus,
+.quick-package-lookup .action-link:focus {
+  outline: 2px solid var(--link-color, #4A90E2);
+  outline-offset: 2px;
+}
+
+/* Loading state for submit button */
+.quick-package-lookup .lookup-submit:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.quick-package-lookup .lookup-submit.loading::after {
+  content: '...';
+  animation: loading 1s infinite;
+}
+
+@keyframes loading {
+  0%, 33% { content: ''; }
+  34%, 66% { content: '.'; }
+  67%, 100% { content: '..'; }
+}
