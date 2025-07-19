@@ -4,6 +4,7 @@
 - **Product Requirements**: `PRD.md` - Complete product specifications and implementation strategy
 - **Technical Specification**: `TECHNICAL_SPEC.md` - Development guidelines and architecture decisions
 - **Project Analysis**: `project-analysis.md` - Comprehensive codebase analysis with all 18+ blocks documented
+- **📚 Comprehensive Documentation**: See `/docs` directory for complete project documentation including AI analysis and architecture assessments
 
 ## Project Overview
 This is an Adobe Edge Delivery Services (EDS) project focused on building custom blocks for da.live. The project follows EDS conventions and patterns for creating performant, semantic HTML blocks.

@@ -1,10 +1,22 @@
 # AI Context for Adobe EDS Project
 
-## Product Specification
-Refer to `PRD.md` for the complete product requirements document outlining the postal marketing website specifications, features, and implementation strategy.
+## Project Documentation
 
-## Technical Specification
-Refer to `TECHNICAL_SPEC.md` for detailed development guidelines, architecture decisions, and implementation specifications.
+### Core Specifications
+- **Product Requirements**: `PRD.md` - Complete product specifications and implementation strategy
+- **Technical Specification**: `TECHNICAL_SPEC.md` - Development guidelines and architecture decisions
+
+### 📚 Comprehensive Documentation Suite
+The `/docs` directory contains comprehensive project documentation:
+- **[Documentation Index](./docs/README.md)** - Central hub for all project documentation
+- **[AI Analysis](./docs/ai-analysis/README.md)** - AI-generated analysis organized by date and topic
+- **[Latest Analysis Session](./docs/ai-analysis/2025-07-19-homepage-analyze-architecture/)** - Homepage transformation planning from postal to modern minimal design
+
+**Key Documentation Features:**
+- Architecture assessments and transformation plans
+- Step-by-step implementation instructions
+- AI analysis methodology transparency
+- Evidence-based analysis with screenshots and code samples
 
 ## Codebase Overview
 This is an Adobe Edge Delivery Services project for da.live focused on building custom blocks for content delivery.

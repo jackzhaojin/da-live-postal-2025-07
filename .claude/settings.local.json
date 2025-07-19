@@ -8,7 +8,13 @@
       "Bash(git commit:*)",
       "Bash(git config:*)",
       "Bash(git push:*)",
-      "mcp__sequential-thinking__sequentialthinking"
+      "mcp__sequential-thinking__sequentialthinking",
+      "mcp__fetch__imageFetch",
+      "WebFetch(domain:main--da-live-postal-2025-07--jackzhaojin.aem.page)",
+      "WebFetch(domain:young-shadow-1623.21st.app)",
+      "mcp__puppeteer__puppeteer_navigate",
+      "mcp__puppeteer__puppeteer_screenshot",
+      "mcp__puppeteer__puppeteer_evaluate"
     ],
     "deny": []
   }

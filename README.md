@@ -5,7 +5,6 @@
 ### Core Documentation
 - **Product Requirements**: See `PRD.md` for complete product specifications and implementation strategy
 - **Technical Specification**: See `TECHNICAL_SPEC.md` for development guidelines and architecture decisions
-- **Development Guide**: See `AGENT.md` for block development patterns and EDS conventions
 - **Project Analysis**: See `project-analysis.md` for comprehensive codebase analysis and architecture overview
 
 ### Quick Reference
@@ -38,3 +37,36 @@ This specific repo has been _slightly_ modified to be compatible with DA's live 
 1. Start the AEM CLI: `aem up`.
 1. Open the `{repo}` folder in your favorite code editor and buil something.
 1. **Recommended:** Install common npm packages like linting and testing: `npm i`.
+
+## 📚 Documentation
+
+### Comprehensive Documentation Suite
+The `/docs` directory contains comprehensive documentation for the da-live-postal-2025-07 project, including AI-generated analysis, architecture assessments, and implementation plans.
+
+**📁 [Documentation Index](./docs/README.md)** - Central hub for all project documentation
+
+### AI Analysis Documentation
+**📁 [AI Analysis](./docs/ai-analysis/README.md)** - AI-generated analysis organized by date and topic
+
+#### Latest Analysis Session
+**📁 [2025-07-19 Homepage Architecture Analysis](./docs/ai-analysis/2025-07-19-homepage-analyze-architecture/)**
+
+Comprehensive transformation planning session covering:
+- **Architecture Analysis**: Technical deep dive into current EDS architecture and modernization requirements
+- **Implementation Guide**: Step-by-step instructions for executing the postal-to-modern transformation
+- **Site Transformation Plan**: Executive overview and strategic direction for complete site transformation
+- **MCP Analysis Methodology**: AI analysis methodology transparency and tool documentation
+
+**Transformation Scope**: Convert current postal theme to modern minimal design matching https://young-shadow-1623.21st.app/
+
+### Documentation Features
+- **Multi-perspective guidance**: Project managers, developers, stakeholders
+- **Implementation-ready**: Actionable steps with technical specifications
+- **Evidence-based analysis**: Screenshots, code samples, live site analysis
+- **Methodology transparency**: Complete AI analysis process documentation
+
+## AI References and Capabilities
+
+- **AGENT.md**: Development guidelines for OpenAI's Codex integration and block development patterns
+- **CLAUDE.md**: Configuration and instructions for Claude Code AI assistant
+- **AI_CONTEXT.md**: Additional AI context and capability documentation

@@ -9,6 +9,12 @@ This is an **Adobe Edge Delivery Services (EDS)** project for da.live, implement
 ### Quick Reference
 For comprehensive project analysis including all 18+ blocks, technology stack details, and architectural patterns, see the [Project Analysis](./project-analysis.md) document.
 
+### 📚 Comprehensive Documentation
+The `/docs` directory contains complete project documentation including:
+- **AI Analysis**: Architecture assessments and transformation plans at [/docs/ai-analysis/](./docs/ai-analysis/)
+- **Implementation Guides**: Step-by-step transformation instructions  
+- **Methodology Documentation**: AI analysis processes and tool documentation
+
 ### Core Architecture Pattern
 - **Block-based modularity**: Self-contained components in `/blocks/` directory
 - **EDS decoration pattern**: Each block exports a `decorate(block)` function
