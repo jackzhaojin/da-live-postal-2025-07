@@ -746,18 +746,8 @@ pre code {
   }
 }
 
-/* === DARK MODE SUPPORT === */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background-color: var(--neutral-900);
-    --surface-color: var(--neutral-800);
-    --card-background: var(--neutral-800);
-    --text-primary: var(--neutral-100);
-    --text-secondary: var(--neutral-300);
-    --text-muted: var(--neutral-400);
-    --border-color: var(--neutral-700);
-  }
-}
+/* === DARK MODE DISABLED === */
+/* Dark mode support has been removed to maintain consistent light theme */
 
 /* === HIGH CONTRAST MODE === */
 @media (prefers-contrast: high) {
