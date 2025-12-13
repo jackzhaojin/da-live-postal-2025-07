@@ -47,7 +47,7 @@
   font-size: var(--text-5xl);
   font-weight: var(--font-weight-extralight);
   letter-spacing: var(--letter-spacing-tighter);
-  color: red;
+  color: var(--text-primary);
   line-height: var(--line-height-tight);
   margin-bottom: var(--space-6);
   max-width: none;
