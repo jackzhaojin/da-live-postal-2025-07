@@ -11,6 +11,7 @@ helix-importer-ui
 
 # local-only
 local-only
+.playwright-mcp
 
 # IDE and Editor files
 ## Visual Studio Code

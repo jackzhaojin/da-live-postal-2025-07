@@ -1,12 +1,10 @@
-import { processBlockMetadata } from '../../scripts/block-metadata.js';
-
 /**
  * Creates the checker-grid SVG background
  * @returns {string} SVG string for the checker-grid pattern
  */
 function createCheckerGridSVG() {
   // Generate a unique ID for the pattern to avoid conflicts
-  const patternId = `checker-grid-${Math.random().toString(36).substr(2, 9)}`;
+  const patternId = `checker-grid-${Math.random().toString(36).substring(2, 11)}`;
 
   return `
     <svg aria-hidden="true" class="hero-checker-grid" xmlns="http://www.w3.org/2000/svg">
@@ -55,9 +53,17 @@ function createCheckerGridSVG() {
 /**
  * Processes hero content and creates button containers
  * @param {Element} block - The hero block element
- * @param {Array} rows - Content rows after metadata extraction
  */
-function processHeroContent(block, rows) {
+function processHeroContent(block) {
+  // Remove metadata row if it exists (EDS authoring artifact)
+  const firstRow = block.querySelector(':scope > div');
+  const firstParagraph = firstRow?.querySelector('p');
+  if (firstParagraph?.textContent.trim().toLowerCase() === 'metadata') {
+    firstRow.remove();
+  }
+
+  // Get the first content row
+  const rows = [...block.querySelectorAll(':scope > div')];
   if (rows.length === 0) return;
 
   const contentRow = rows[0];
@@ -127,22 +133,12 @@ function applyCheckerGridVariation(block) {
  * @param {Element} block - The hero block element
  */
 export default function decorate(block) {
-  // Process metadata and get content rows
-  const { metadata, rows } = processBlockMetadata(block, {
-    allowedKeys: ['variation', 'theme', 'alignment'],
-  });
-
   // Process hero content (buttons, etc.)
-  processHeroContent(block, rows);
+  processHeroContent(block);
 
-  // Apply variation-specific styling
-  if (metadata.variation === 'checker-grid') {
+  // Apply variation-specific styling based on EDS style classes
+  // Author with: hero (style-checker-grid)
+  if (block.classList.contains('style-checker-grid')) {
     applyCheckerGridVariation(block);
-  }
-
-  // Log metadata for debugging (remove in production)
-  if (Object.keys(metadata).length > 0) {
-    // eslint-disable-next-line no-console
-    console.log('Hero metadata:', metadata);
   }
 }
