@@ -410,6 +410,7 @@ p {
 }
 
 /* Caption-like paragraph immediately after an image */
+/* stylelint-disable no-descending-specificity */
 .default-content-wrapper picture + p,
 .default-content-wrapper p:has(> picture) + p {
   text-align: center;
@@ -420,6 +421,7 @@ p {
   margin-top: 0;
   margin-bottom: var(--space-10);
 }
+/* stylelint-enable no-descending-specificity */
 
 .lead {
   font-size: var(--text-xl);
@@ -756,6 +758,7 @@ main .section.primary h6 {
 }
 
 /* === IMAGES === */
+/* stylelint-disable-next-line no-descending-specificity */
 img {
   max-width: 100%;
   height: auto;
@@ -769,6 +772,7 @@ img {
   flex-shrink: 0;
 }
 
+/* stylelint-disable-next-line no-descending-specificity */
 .icon img {
   width: 100%;
   height: 100%;
@@ -776,11 +780,13 @@ img {
 }
 
 /* === LISTS === */
+/* stylelint-disable-next-line no-descending-specificity */
 ul, ol {
   margin-bottom: var(--space-4);
   padding-left: var(--space-6);
 }
 
+/* stylelint-disable-next-line no-descending-specificity */
 li {
   margin-bottom: var(--space-2);
   line-height: var(--leading-relaxed);
@@ -923,6 +929,7 @@ pre code {
 }
 
 /* === DARK MODE DISABLED === */
+
 /* Dark mode support has been removed to maintain consistent light theme */
 
 /* === HIGH CONTRAST MODE === */

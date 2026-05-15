@@ -1,4 +1,15 @@
-/* === Postal-Modern Hero (Editorial) === */
+/* === Postal-Modern Hero (Editorial) ===
+ *
+ * Variants (set via da.live block name, e.g. `hero (postcard)`):
+ *   (default)  editorial 2-col with photo-stamp framing
+ *   postcard   image-first: photo fills width as a vintage postcard,
+ *              content sits on a cream paper card below
+ *   minimal    text-only manifesto: larger serif, no image, generous
+ *              whitespace, postal accents only
+ *
+ * The closing-CTA hero (no <picture>) auto-renders as a navy banner;
+ * no variant class needed.
+ */
 
 .hero-container {
   padding: 0 !important;
@@ -125,6 +136,7 @@
   margin-bottom: 0;
 }
 
+/* stylelint-disable-next-line no-descending-specificity */
 .hero p {
   font-size: var(--text-lg);
   color: var(--text-secondary);
@@ -134,6 +146,7 @@
 }
 
 /* === Hero image — large postal-stamp framed photo === */
+/* stylelint-disable-next-line no-descending-specificity */
 .hero p:has(picture) {
   display: block;
   position: relative;
@@ -288,6 +301,7 @@
   display: none;
 }
 
+/* stylelint-disable-next-line no-descending-specificity */
 .hero:not(:has(picture)) p {
   color: rgb(255 255 255 / 85%);
   font-size: var(--text-lg);
@@ -298,6 +312,7 @@
   justify-content: center;
 }
 
+/* stylelint-disable-next-line no-descending-specificity */
 .hero:not(:has(picture)) .button.primary {
   background: var(--postal-red);
   color: var(--neutral-white);
@@ -320,8 +335,7 @@
   .hero:has(picture) > div > div {
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
-    column-gap: var(--space-12);
-    row-gap: var(--space-4);
+    gap: var(--space-4) var(--space-12);
     align-items: center;
   }
 
@@ -359,4 +373,206 @@
   .hero {
     padding: clamp(4rem, 7vw, 6rem) var(--space-8);
   }
+}
+
+/* ============================================================
+ * Variant: .hero.postcard  — image-first, postcard aesthetic
+ * ============================================================ */
+
+.hero.postcard {
+  background: var(--postal-navy);
+  padding: 0;
+  border-bottom: 0;
+}
+
+.hero.postcard::before {
+  background: repeating-linear-gradient(
+    45deg,
+    var(--postal-red) 0 18px,
+    var(--postal-cream) 18px 22px,
+    var(--postal-navy) 22px 40px,
+    var(--postal-cream) 40px 44px
+  );
+  height: 10px;
+}
+
+.hero.postcard::after {
+  display: none;
+}
+
+.hero.postcard > div {
+  max-width: 1200px;
+  padding: 0;
+}
+
+.hero.postcard > div > div {
+  display: block;
+  position: relative;
+}
+
+/* Picture becomes a full-bleed postcard image */
+.hero.postcard p:has(picture) {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  transform: none;
+  max-width: none;
+  position: relative;
+}
+
+.hero.postcard p:has(picture)::before,
+.hero.postcard p:has(picture)::after {
+  display: none;
+}
+
+.hero.postcard p:has(picture) img {
+  width: 100%;
+  height: clamp(320px, 50vh, 520px);
+  object-fit: cover;
+  filter: brightness(0.7) saturate(1.1);
+}
+
+/* Cream content card overlapping the image */
+.hero.postcard > div > div > blockquote,
+.hero.postcard > div > div > h1,
+.hero.postcard > div > div > h1 + p,
+.hero.postcard > div > div > h1 ~ p,
+.hero.postcard > div > div > .button-container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero.postcard > div > div > h1 {
+  color: var(--postal-navy);
+  background: var(--postal-cream);
+  padding: var(--space-8) var(--space-8) var(--space-3);
+  margin: -8rem var(--space-6) 0;
+  font-size: clamp(2rem, 4.5vw, 3.5rem);
+  border-top: 6px solid var(--postal-red);
+  max-width: 800px;
+  box-shadow: 0 -2px 0 var(--postal-red), 0 24px 60px -20px rgb(20 17 13 / 35%);
+}
+
+.hero.postcard > div > div > blockquote {
+  margin: 0 auto var(--space-6);
+  padding: var(--space-6) var(--space-6) 0;
+  max-width: 800px;
+  text-align: center;
+}
+
+.hero.postcard > div > div > blockquote p {
+  color: var(--postal-cream);
+  border-top-color: var(--postal-cream);
+  border-bottom-color: var(--postal-cream);
+}
+
+.hero.postcard > div > div > blockquote p::before {
+  color: var(--postal-red-light);
+}
+
+.hero.postcard > div > div > h1 + p,
+.hero.postcard > div > div > h1 ~ p {
+  background: var(--postal-cream);
+  padding: 0 var(--space-8);
+  margin: 0 var(--space-6);
+  max-width: 800px;
+}
+
+.hero.postcard > div > div > .button-container {
+  background: var(--postal-cream);
+  padding: var(--space-4) var(--space-8) var(--space-10);
+  margin: 0 var(--space-6) 0;
+  max-width: 800px;
+}
+
+@media (width >= 900px) {
+  .hero.postcard:has(picture) > div > div {
+    display: block;
+  }
+
+  .hero.postcard > div > div > h1 {
+    margin: -6rem auto 0;
+    padding: var(--space-10) var(--space-12) var(--space-4);
+  }
+
+  .hero.postcard > div > div > blockquote,
+  .hero.postcard > div > div > h1 + p,
+  .hero.postcard > div > div > h1 ~ p,
+  .hero.postcard > div > div > .button-container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--space-12);
+    padding-right: var(--space-12);
+  }
+}
+
+/* ============================================================
+ * Variant: .hero.minimal  — text-only manifesto
+ * ============================================================ */
+
+.hero.minimal {
+  background: var(--postal-cream);
+  padding: clamp(5rem, 10vw, 9rem) var(--space-6);
+  border-bottom: 0;
+  text-align: center;
+}
+
+.hero.minimal::before {
+  background: var(--postal-red);
+  height: 4px;
+}
+
+.hero.minimal::after {
+  background-image: none;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.hero.minimal > div {
+  max-width: 760px;
+  text-align: center;
+}
+
+.hero.minimal > div > div {
+  display: block;
+  text-align: center;
+}
+
+/* Hide image entirely in minimal */
+/* stylelint-disable-next-line no-descending-specificity */
+.hero.minimal p:has(picture),
+.hero.minimal picture {
+  display: none;
+}
+
+.hero.minimal > div > div > blockquote {
+  text-align: center;
+  margin-bottom: var(--space-8);
+}
+
+.hero.minimal > div > div > blockquote p {
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block;
+}
+
+.hero.minimal > div > div > h1 {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  max-width: 18ch;
+  margin-left: auto;
+  margin-right: auto;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.hero.minimal > div > div > h1 + p,
+.hero.minimal > div > div > h1 ~ p {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.hero.minimal > div > div > .button-container {
+  justify-content: center;
 }

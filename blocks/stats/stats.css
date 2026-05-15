@@ -1,4 +1,9 @@
-/* === Postal-Modern Stats (Postage Stamps) === */
+/* === Postal-Modern Stats (Postage Stamps) ===
+ *
+ * Variants (set via da.live block name, e.g. `stats (odometer)`):
+ *   (default)  perforated postage-stamp tiles with big serif numerals
+ *   odometer   flat horizontal navy chip with monospace digits
+ */
 
 .stats-wrapper {
   max-width: 1040px;
@@ -161,4 +166,62 @@
     grid-column: span 2;
     grid-template-columns: 1fr 1fr;
   }
+}
+
+/* ============================================================
+ * Variant: .stats.odometer  — flat navy chip with monospace digits
+ * ============================================================ */
+
+.stats.odometer {
+  background: var(--postal-navy);
+  border-color: var(--postal-navy-dark);
+  box-shadow: 0 16px 40px -16px rgb(20 17 13 / 30%);
+  padding: var(--space-10) var(--space-6);
+}
+
+.stats.odometer::before {
+  content: 'MILEAGE';
+  background: var(--postal-red);
+  color: var(--neutral-white);
+}
+
+.stats.odometer .stats-item > div {
+  background: var(--postal-navy-dark);
+  background-image: none;
+  border: 1px solid rgb(255 255 255 / 12%);
+  border-radius: 4px;
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 8%),
+    0 4px 16px -8px rgb(0 0 0 / 50%);
+  padding: var(--space-6) var(--space-4);
+}
+
+.stats.odometer .stats-item > div:hover {
+  transform: translateY(-2px) rotate(0);
+  border-color: var(--postal-red);
+}
+
+.stats.odometer .stats-item > div:nth-child(2):hover {
+  transform: translateY(-2px) rotate(0);
+}
+
+.stats.odometer .stats-item > div::after {
+  display: none;
+}
+
+.stats.odometer .stats-number p:first-child,
+.stats.odometer .stats-label p:first-child {
+  font-family: var(--font-mono);
+  font-size: clamp(2.5rem, 5vw, 3.75rem);
+  color: var(--postal-cream);
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+}
+
+.stats.odometer .stats-number p:last-child,
+.stats.odometer .stats-label p:last-child {
+  color: var(--postal-red-light);
+  font-family: var(--font-stamp);
+  font-size: 10px;
+  letter-spacing: 0.28em;
 }

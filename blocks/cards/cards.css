@@ -1,4 +1,10 @@
-/* === Postal-Modern Cards (Postcards) === */
+/* === Postal-Modern Cards (Postcards) ===
+ *
+ * Variants (set via da.live block name, e.g. `cards (registered)`):
+ *   (default)   postcard with corner stamp + FEATURE eyebrow
+ *   registered  red wax-seal corner + dashed ring; "REGISTERED" eyebrow
+ *   express     postal-navy banner header + speed stripes; "EXPRESS" eyebrow
+ */
 
 .cards-wrapper {
   max-width: 760px;
@@ -184,5 +190,120 @@
 
   .cards-card-body {
     padding: var(--space-12) var(--space-10) var(--space-10);
+  }
+}
+
+/* ============================================================
+ * Variant: .cards.registered  — official, wax-seal feel
+ * ============================================================ */
+
+.cards.registered .cards-card-body {
+  border: 2px dashed var(--postal-red);
+  background: var(--postal-paper);
+  box-shadow:
+    0 1px 0 var(--postal-red),
+    0 14px 28px -14px rgb(200 16 46 / 25%);
+}
+
+.cards.registered .cards-card-body::before {
+  background: var(--postal-red);
+  height: 3px;
+}
+
+/* Replace corner stamp with a wax-seal circle */
+.cards.registered .cards-card-body::after {
+  content: 'R';
+  white-space: normal;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 2.5px solid var(--postal-red-dark);
+  background: var(--postal-red);
+  color: var(--neutral-white);
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: 700;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0;
+  transform: rotate(-8deg);
+  top: -16px;
+  right: 20px;
+  box-shadow:
+    inset 0 0 0 4px var(--postal-red),
+    inset 0 0 0 5px var(--neutral-white),
+    0 4px 12px -2px rgb(200 16 46 / 50%);
+}
+
+.cards.registered .cards-card-body h3 {
+  color: var(--postal-red-dark);
+}
+
+.cards.registered .cards-card-body h3::before {
+  content: 'REGISTERED';
+  color: var(--postal-red);
+}
+
+/* ============================================================
+ * Variant: .cards.express  — urgent, navy speed-stripe banner
+ * ============================================================ */
+
+.cards.express .cards-card-body {
+  border: 1px solid var(--postal-navy);
+  padding-top: calc(var(--space-10) + 32px);
+}
+
+.cards.express .cards-card-body::before {
+  height: 38px;
+  background:
+    linear-gradient(90deg, var(--postal-navy) 0%, var(--postal-navy) 100%),
+    repeating-linear-gradient(
+      -45deg,
+      var(--postal-navy) 0 12px,
+      var(--postal-red) 12px 18px
+    );
+  background-image: repeating-linear-gradient(
+    -45deg,
+    var(--postal-navy) 0 12px,
+    var(--postal-red) 12px 18px
+  );
+  border-radius: 4px 4px 0 0;
+}
+
+.cards.express .cards-card-body::after {
+  content: 'EXPRESS';
+  white-space: normal;
+  top: 6px;
+  right: 16px;
+  width: auto;
+  height: auto;
+  background: var(--neutral-white);
+  color: var(--postal-navy);
+  border: 1.5px solid var(--postal-navy);
+  border-radius: 2px;
+  font-family: var(--font-stamp);
+  font-size: 11px;
+  font-weight: 800;
+  padding: 4px 10px;
+  letter-spacing: 0.22em;
+  transform: rotate(0deg);
+  display: inline-flex;
+  align-items: center;
+}
+
+.cards.express .cards-card-body h3::before {
+  content: 'PRIORITY MAIL';
+  color: var(--postal-navy);
+}
+
+.cards.express .cards-card-body h3 {
+  color: var(--postal-navy);
+}
+
+@media (width >= 768px) {
+  .cards.express .cards-card-body {
+    padding-top: calc(var(--space-12) + 32px);
   }
 }
