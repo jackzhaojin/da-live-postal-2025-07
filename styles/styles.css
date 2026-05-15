@@ -7,63 +7,93 @@
 :root {
   /* === MODERN NEUTRAL PALETTE === */
 
-  /* Base Neutrals */
+  /* Base Neutrals - warm paper tones */
   --neutral-white: #fff;
-  --neutral-50: #fafafa;
-  --neutral-100: #f5f5f5;
-  --neutral-200: #e5e5e5;
-  --neutral-300: #d4d4d4;
-  --neutral-400: #a3a3a3;
-  --neutral-500: #737373;
-  --neutral-600: #525252;
-  --neutral-700: #404040;
-  --neutral-800: #262626;
-  --neutral-900: #171717;
-  
-  /* Accent Colors */
-  --accent-blue: #3b82f6;
-  --accent-green: #10b981;
-  --accent-purple: #8b5cf6;
-  --accent-orange: #f59e0b;
+  --neutral-50: #faf6ee;        /* cream paper */
+  --neutral-100: #f3ecdd;       /* kraft */
+  --neutral-200: #e6dcc7;       /* aged paper */
+  --neutral-300: #c9bda1;
+  --neutral-400: #8a8170;
+  --neutral-500: #6b6357;
+  --neutral-600: #4a4439;
+  --neutral-700: #2f2a22;
+  --neutral-800: #1f1c17;
+  --neutral-900: #14110d;
+
+  /* Postal Brand Palette */
+  --postal-navy: #1b2a4e;       /* official postal navy */
+  --postal-navy-dark: #0e1a36;
+  --postal-navy-light: #2c4275;
+  --postal-red: #c8102e;        /* postage red */
+  --postal-red-dark: #9a0a23;
+  --postal-red-light: #e63349;
+  --postal-cream: #faf6ee;
+  --postal-paper: #fbfaf7;
+  --postal-kraft: #d9c79a;
+  --postal-gold: #c8a951;       /* premium gold seal */
+  --postal-ink: #1f1c17;
+
+  /* Legacy accent aliases (keep for backwards compat with blocks) */
+  --accent-blue: var(--postal-navy);
+  --accent-green: #2c7a4d;
+  --accent-purple: var(--postal-navy-light);
+  --accent-orange: var(--postal-gold);
 
   /* Success, Warning, Error Colors */
   --success-600: var(--accent-green);
-  --success-500: #22c55e;
-  --success-100: #dcfce7;
-  --warning-600: var(--accent-orange);
-  --warning-500: #eab308;
-  --warning-100: #fef3c7;
-  --error-600: #dc2626;
-  --error-500: #ef4444;
-  --error-100: #fee2e2;
+  --success-500: #3a9963;
+  --success-100: #d8ead9;
+  --warning-600: var(--postal-gold);
+  --warning-500: #d4b65f;
+  --warning-100: #f6ecd3;
+  --error-600: var(--postal-red-dark);
+  --error-500: var(--postal-red);
+  --error-100: #f7d6dc;
 
   /* === SEMANTIC COLOR ASSIGNMENTS === */
-  --primary-color: var(--accent-blue);
-  --primary-hover: #2563eb;
-  --primary-light: #dbeafe;
-  --secondary-color: var(--neutral-600);
-  --secondary-hover: var(--neutral-700);
-  --secondary-light: var(--neutral-50);
-  --accent-color: var(--accent-blue);
-  --accent-hover: #2563eb;
-  --accent-light: #dbeafe;
-  --background-color: var(--neutral-50);
-  --surface-color: var(--neutral-white);
+  --primary-color: var(--postal-navy);
+  --primary-hover: var(--postal-navy-dark);
+  --primary-light: #e3e8f2;
+  --secondary-color: var(--postal-red);
+  --secondary-hover: var(--postal-red-dark);
+  --secondary-light: #f7d6dc;
+  --accent-color: var(--postal-red);
+  --accent-hover: var(--postal-red-dark);
+  --accent-light: #f7d6dc;
+  --background-color: var(--postal-cream);
+  --surface-color: var(--postal-paper);
   --card-background: var(--neutral-white);
-  --text-primary: var(--neutral-900);
-  --text-secondary: var(--neutral-700);
+  --text-primary: var(--postal-ink);
+  --text-secondary: #3a342a;
   --text-muted: var(--neutral-500);
   --text-on-primary: var(--neutral-white);
   --border-color: var(--neutral-200);
-  --border-focus: var(--accent-color);
+  --border-focus: var(--primary-color);
   --border-error: var(--error-500);
+
+  /* Legacy variable aliases (kept so existing block CSS doesn't break) */
+  --color-white: var(--neutral-white);
+  --color-primary: var(--postal-navy);
+  --color-text: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-background-light: var(--postal-paper);
+  --light-color: var(--postal-paper);
+  --dark-color: var(--postal-navy);
+  --content-max-width: 1200px;
+  --section-padding-mobile: var(--space-12) var(--space-4);
+  --section-padding-desktop: var(--space-16) var(--space-8);
+  --body-font-size-xs: var(--text-xs);
+  --font-family-body: var(--font-primary);
+  --font-family-heading: var(--font-heading);
 
   /* === TYPOGRAPHY SYSTEM === */
 
-  /* Font Families */
+  /* Font Families - editorial postal */
   --font-primary: 'Inter', -apple-system, blinkmacsystemfont, 'Segoe UI', roboto, 'Helvetica Neue', arial, sans-serif;
-  --font-heading: 'Inter', -apple-system, blinkmacsystemfont, 'Segoe UI', roboto, 'Helvetica Neue', arial, sans-serif;
+  --font-heading: 'Charter', 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', 'Georgia', 'Times New Roman', serif;
+  --font-serif: var(--font-heading);
   --font-mono: 'SF Mono', monaco, 'Cascadia Code', 'Roboto Mono', consolas, 'Courier New', monospace;
+  --font-stamp: 'Inter', -apple-system, blinkmacsystemfont, sans-serif;
 
   /* Enhanced Font Weights */
   --font-weight-extralight: 200;
@@ -200,6 +230,10 @@ body {
   line-height: var(--leading-normal);
   color: var(--text-primary);
   background-color: var(--background-color);
+  background-image:
+    radial-gradient(circle at 12% 8%, rgb(200 16 46 / 4%) 0, transparent 35%),
+    radial-gradient(circle at 88% 92%, rgb(27 42 78 / 4%) 0, transparent 40%);
+  background-attachment: fixed;
   text-rendering: optimizelegibility;
   transition: var(--transition-all);
 }
@@ -217,49 +251,174 @@ body.appear {
 /* === TYPOGRAPHY === */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
-  font-weight: var(--font-weight-bold);
+  font-weight: 700;
   line-height: var(--leading-tight);
   color: var(--text-primary);
   margin-bottom: var(--space-4);
   scroll-margin-top: var(--space-20);
+  letter-spacing: var(--letter-spacing-tight);
 }
 
-h1 { 
+h1 {
   font-size: var(--text-5xl);
-  font-weight: var(--font-weight-extrabold);
+  font-weight: 700;
   margin-bottom: var(--space-6);
+  letter-spacing: -0.02em;
 }
 
-h2 { 
+h2 {
   font-size: var(--text-4xl);
-  font-weight: var(--font-weight-bold);
+  font-weight: 700;
   margin-bottom: var(--space-5);
+  position: relative;
+  padding-top: var(--space-3);
 }
 
-h3 { 
-  font-size: var(--text-3xl);
-  font-weight: var(--font-weight-bold);
+/* Postal-red rule above h2 inside default content (editorial section divider) */
+.default-content-wrapper > h2::before {
+  content: '';
+  display: block;
+  width: 56px;
+  height: 3px;
+  background: var(--postal-red);
+  margin-bottom: var(--space-4);
+  border-radius: 2px;
 }
 
-h4 { 
+h3 {
   font-size: var(--text-2xl);
-  font-weight: var(--font-weight-semibold);
+  font-weight: 700;
+  letter-spacing: -0.01em;
 }
 
-h5 { 
+h4 {
   font-size: var(--text-xl);
-  font-weight: var(--font-weight-semibold);
+  font-weight: 600;
 }
 
-h6 { 
+h5 {
   font-size: var(--text-lg);
-  font-weight: var(--font-weight-medium);
+  font-weight: 600;
+}
+
+h6 {
+  font-size: var(--text-base);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wider);
 }
 
 p {
-  margin-bottom: var(--space-4);
+  margin-bottom: var(--space-5);
   color: var(--text-secondary);
-  line-height: var(--leading-relaxed);
+  line-height: 1.7;
+  font-size: var(--text-base);
+}
+
+/* Editorial drop cap on the opening paragraph after the hero */
+.hero-wrapper + .default-content-wrapper > p:first-child::first-letter {
+  font-family: var(--font-heading);
+  float: left;
+  font-size: 4.5em;
+  line-height: 0.85;
+  font-weight: 700;
+  color: var(--postal-navy);
+  padding: 0.05em 0.12em 0 0;
+  margin-top: 0.08em;
+}
+
+/* Pull-quote treatment for blockquotes inside default content */
+.default-content-wrapper blockquote {
+  margin: var(--space-10) 0;
+  padding: var(--space-6) var(--space-8);
+  border-left: 4px solid var(--postal-red);
+  background: var(--postal-paper);
+  position: relative;
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  line-height: 1.4;
+  color: var(--postal-navy);
+  font-style: italic;
+}
+
+.default-content-wrapper blockquote::before {
+  content: '\201C';
+  position: absolute;
+  top: -0.2em;
+  left: 0.15em;
+  font-size: 5rem;
+  line-height: 1;
+  color: var(--postal-red);
+  opacity: 0.15;
+  font-family: var(--font-heading);
+}
+
+.default-content-wrapper blockquote p {
+  margin-bottom: var(--space-3);
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.default-content-wrapper blockquote p:last-child {
+  margin-bottom: 0;
+  font-size: var(--text-base);
+  font-style: normal;
+  font-family: var(--font-primary);
+  color: var(--text-muted);
+  font-weight: 500;
+  letter-spacing: var(--letter-spacing-wide);
+}
+
+/* Refined list styling in article body */
+.default-content-wrapper ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.default-content-wrapper ul li {
+  position: relative;
+  padding-left: var(--space-8);
+  margin-bottom: var(--space-3);
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.default-content-wrapper ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  width: 18px;
+  height: 2px;
+  background: var(--postal-red);
+}
+
+.default-content-wrapper ul li strong {
+  color: var(--postal-navy);
+  font-weight: 700;
+}
+
+/* Article images: editorial polish */
+.default-content-wrapper picture img {
+  width: 100%;
+  border-radius: 2px;
+  box-shadow:
+    0 1px 0 var(--neutral-200),
+    0 24px 48px -16px rgb(20 17 13 / 25%);
+  margin: var(--space-6) 0 var(--space-3);
+}
+
+/* Caption-like paragraph immediately after an image */
+.default-content-wrapper picture + p,
+.default-content-wrapper p:has(> picture) + p {
+  text-align: center;
+  font-size: var(--text-sm);
+  font-style: italic;
+  color: var(--text-muted);
+  letter-spacing: var(--letter-spacing-wide);
+  margin-top: 0;
+  margin-bottom: var(--space-10);
 }
 
 .lead {
@@ -312,16 +471,18 @@ input[type="button"] {
   align-items: center;
   justify-content: center;
   gap: var(--space-2);
-  padding: var(--space-3) var(--space-6);
-  font-family: var(--font-primary);
-  font-size: var(--text-base);
-  font-weight: var(--font-weight-medium);
+  padding: var(--space-4) var(--space-8);
+  font-family: var(--font-stamp);
+  font-size: var(--text-sm);
+  font-weight: 600;
   line-height: 1;
   text-align: center;
   text-decoration: none;
   white-space: nowrap;
-  border: 1px solid transparent;
-  border-radius: var(--radius-md);
+  border: 2px solid transparent;
+  border-radius: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
   cursor: pointer;
   transition: var(--transition-fast);
   position: relative;
@@ -335,9 +496,11 @@ input[type="button"] {
 button:not(.secondary, .ghost, .outline),
 input[type="submit"]:not(.secondary, .ghost, .outline),
 input[type="button"]:not(.secondary, .ghost, .outline) {
-  background-color: var(--primary-color);
+  background-color: var(--postal-navy);
   color: var(--text-on-primary);
-  box-shadow: var(--shadow-sm);
+  box-shadow:
+    0 2px 0 0 var(--postal-navy-dark),
+    0 6px 16px -4px rgb(27 42 78 / 35%);
 }
 
 /* Disabled State */
@@ -361,8 +524,10 @@ input[type="button"]:focus {
 
 .button:not(.secondary, .ghost, .outline):hover,
 button:not(.secondary, .ghost, .outline):hover {
-  background-color: var(--primary-hover);
-  box-shadow: var(--shadow-md);
+  background-color: var(--postal-red);
+  box-shadow:
+    0 2px 0 0 var(--postal-red-dark),
+    0 8px 20px -4px rgb(200 16 46 / 45%);
   transform: translateY(-1px);
 }
 
@@ -541,7 +706,7 @@ main {
 
 /* Sections */
 main > .section {
-  padding: var(--section-padding) 0;
+  padding: var(--space-10) 0;
 }
 
 main > .section > div {
@@ -551,12 +716,23 @@ main > .section > div {
 }
 
 main > .section:first-of-type {
-  padding-top: var(--space-20);
+  padding-top: 0;
 }
 
 main > .section.hero {
   padding-top: var(--space-32);
   padding-bottom: var(--space-32);
+}
+
+/* Editorial reading column for default content wrappers (article body) */
+main > .section > .default-content-wrapper {
+  max-width: 760px;
+  margin: 0 auto var(--space-8);
+  padding: 0 var(--content-padding);
+}
+
+main > .section > .default-content-wrapper:last-child {
+  margin-bottom: 0;
 }
 
 /* Section Variants */

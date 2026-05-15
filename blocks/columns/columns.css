@@ -1,6 +1,15 @@
+/* === Postal-Modern Columns (Comparison Cards) === */
+
+.columns-wrapper {
+  max-width: 920px;
+  margin: var(--space-10) auto;
+  padding: 0 var(--content-padding);
+}
+
 .columns > div {
   display: flex;
   flex-direction: column;
+  gap: var(--space-6);
 }
 
 .columns img {
@@ -19,11 +28,138 @@
   display: block;
 }
 
+/* 2-column comparison card styling (Traditional CMS vs DA.Live) */
+.columns.columns-2-cols > div > div {
+  position: relative;
+  background: var(--neutral-white);
+  border: 1px solid var(--neutral-200);
+  border-radius: 4px;
+  padding: var(--space-10) var(--space-8) var(--space-8);
+  box-shadow:
+    0 1px 0 var(--neutral-200),
+    0 12px 28px -14px rgb(20 17 13 / 20%);
+}
+
+/* "Old way" column - muted grey-red */
+.columns.columns-2-cols > div > div:first-child {
+  background: var(--postal-paper);
+  border-color: var(--neutral-200);
+}
+
+.columns.columns-2-cols > div > div:first-child::before {
+  content: 'OLD WAY';
+  position: absolute;
+  top: -10px;
+  left: var(--space-8);
+  background: var(--neutral-500);
+  color: var(--neutral-white);
+  font-family: var(--font-stamp);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  padding: 4px 12px;
+  border-radius: 2px;
+}
+
+/* "New way" column - postal navy accent */
+.columns.columns-2-cols > div > div:last-child {
+  background: var(--neutral-white);
+  border-color: var(--postal-navy);
+}
+
+.columns.columns-2-cols > div > div:last-child::before {
+  content: 'DA.LIVE WAY';
+  position: absolute;
+  top: -10px;
+  left: var(--space-8);
+  background: var(--postal-red);
+  color: var(--neutral-white);
+  font-family: var(--font-stamp);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  padding: 4px 12px;
+  border-radius: 2px;
+}
+
+.columns.columns-2-cols h3 {
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  margin-bottom: var(--space-5);
+  letter-spacing: -0.01em;
+  padding-bottom: var(--space-3);
+  border-bottom: 2px solid var(--neutral-200);
+}
+
+.columns.columns-2-cols > div > div:first-child h3 {
+  color: var(--neutral-700);
+}
+
+.columns.columns-2-cols > div > div:last-child h3 {
+  color: var(--postal-navy);
+  border-bottom-color: var(--postal-red);
+}
+
+.columns.columns-2-cols ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.columns.columns-2-cols ul li {
+  position: relative;
+  padding: var(--space-3) 0 var(--space-3) var(--space-8);
+  margin-bottom: 0;
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  line-height: 1.5;
+  border-bottom: 1px dashed var(--neutral-200);
+}
+
+.columns.columns-2-cols ul li:last-child {
+  border-bottom: 0;
+}
+
+.columns.columns-2-cols > div > div:first-child ul li::before {
+  content: '\2715';
+  position: absolute;
+  left: 0;
+  top: var(--space-3);
+  width: 22px;
+  height: 22px;
+  background: rgb(200 16 46 / 12%);
+  color: var(--postal-red);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.columns.columns-2-cols > div > div:last-child ul li::before {
+  content: '\2713';
+  position: absolute;
+  left: 0;
+  top: var(--space-3);
+  width: 22px;
+  height: 22px;
+  background: rgb(44 122 77 / 14%);
+  color: var(--accent-green);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+}
+
 @media (width >= 900px) {
   .columns > div {
-    align-items: center;
+    align-items: stretch;
     flex-direction: unset;
-    gap: 24px;
+    gap: var(--space-6);
   }
 
   .columns > div > div {

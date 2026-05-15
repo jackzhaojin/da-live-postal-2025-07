@@ -1,15 +1,23 @@
 /* Modern Postal Service Navigation */
 header {
-  background: var(--color-white);
-  border-bottom: 1px solid #e5e7eb;
+  background: var(--postal-paper);
+  border-bottom: 1px solid var(--neutral-200);
   position: sticky;
   top: 0;
   z-index: 9999;
-  box-shadow: 0 1px 3px rgb(0 0 0 / 10%);
+  box-shadow: 0 1px 3px rgb(20 17 13 / 8%);
+}
+
+/* Postal red top stripe */
+header::before {
+  content: '';
+  display: block;
+  height: 3px;
+  background: var(--postal-red);
 }
 
 header .nav-wrapper {
-  background-color: var(--color-white);
+  background-color: var(--postal-paper);
   width: 100%;
   z-index: 9999;
   position: relative;

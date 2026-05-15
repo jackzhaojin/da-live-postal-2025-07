@@ -12,6 +12,7 @@ helix-importer-ui
 # local-only
 local-only
 .playwright-mcp
+.playwright-cli
 
 # IDE and Editor files
 ## Visual Studio Code
@@ -37,6 +38,12 @@ ai-docs
 /*TECHNICAL*.md
 .github/*copilot*.md
 .claude/settings.local.json
+
+# Agent skills (installed via `npx skills add adobe/skills`)
+# Treated like node_modules — not committed, installed per-developer.
+.agents/
+.claude/skills/
+skills-lock.json
 
 ## Sublime Text
 *.sublime-project

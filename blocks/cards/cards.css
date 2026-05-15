@@ -1,6 +1,14 @@
+/* === Postal-Modern Cards (Postcards) === */
+
+.cards-wrapper {
+  max-width: 760px;
+  margin: var(--space-8) auto;
+  padding: 0 var(--content-padding);
+}
+
 .cards ul {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: var(--space-8);
   padding: 0;
   list-style: none;
@@ -12,51 +20,91 @@
 }
 
 .cards-card-body {
-  background: var(--card-background);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-2xl);
-  padding: var(--space-8);
-  transition: all 0.3s ease;
-  box-shadow: var(--shadow-sm);
   position: relative;
-  overflow: hidden;
+  background: var(--neutral-white);
+  border: 1px solid var(--neutral-200);
+  border-radius: 4px;
+  padding: var(--space-10) var(--space-8) var(--space-8);
+  transition: all 0.3s ease;
+  box-shadow:
+    0 1px 0 var(--neutral-200),
+    0 12px 28px -12px rgb(20 17 13 / 20%);
+  overflow: visible;
 }
 
+/* Postal-red bar at top of card (like an envelope edge) */
 .cards-card-body::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, var(--accent-color), var(--accent-purple));
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
-  transform-origin: left;
+  height: 6px;
+  background: linear-gradient(90deg, var(--postal-red) 0%, var(--postal-red) 60%, var(--postal-navy) 60%, var(--postal-navy) 100%);
+  border-radius: 4px 4px 0 0;
+  transition: none;
+  transform: none;
+}
+
+/* Postage stamp in top-right corner */
+.cards-card-body::after {
+  content: 'EDS\A 1\00A2';
+  white-space: pre;
+  position: absolute;
+  top: -8px;
+  right: 24px;
+  width: 44px;
+  height: 56px;
+  background: var(--postal-cream);
+  border: 1.5px dashed var(--postal-navy);
+  font-family: var(--font-stamp);
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--postal-navy);
+  text-align: center;
+  line-height: 1.1;
+  padding-top: 14px;
+  letter-spacing: 0.1em;
+  transform: rotate(4deg);
+  box-shadow: 0 4px 12px -4px rgb(20 17 13 / 20%);
+  pointer-events: none;
 }
 
 .cards-card-body:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-xl);
-  border-color: var(--accent-color);
-}
-
-.cards-card-body:hover::before {
-  transform: scaleX(1);
+  transform: translateY(-3px);
+  box-shadow:
+    0 1px 0 var(--neutral-200),
+    0 20px 40px -16px rgb(20 17 13 / 28%);
+  border-color: var(--postal-navy);
 }
 
 .cards-card-body h3 {
-  font-size: var(--text-xl);
-  font-weight: var(--font-weight-semibold);
-  color: var(--text-primary);
-  margin-bottom: var(--space-3);
-  line-height: var(--line-height-snug);
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--postal-navy);
+  margin-bottom: var(--space-4);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+/* Eyebrow above card title */
+.cards-card-body h3::before {
+  content: 'FEATURE';
+  display: block;
+  font-family: var(--font-stamp);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--postal-red);
+  letter-spacing: 0.22em;
+  margin-bottom: var(--space-2);
+  text-transform: uppercase;
 }
 
 .cards-card-body p {
   font-size: var(--text-base);
   color: var(--text-secondary);
-  line-height: var(--line-height-relaxed);
+  line-height: 1.7;
   margin-bottom: var(--space-4);
 }
 
@@ -64,6 +112,7 @@
   list-style: none;
   padding: 0;
   margin: var(--space-4) 0;
+  display: block;
 }
 
 .cards-card-body ul li {
@@ -76,7 +125,7 @@
 }
 
 .cards-card-body ul li::before {
-  content: '✓';
+  content: '\2713';
   position: absolute;
   left: 0;
   color: var(--accent-green);
@@ -88,60 +137,52 @@
 }
 
 .cards-card-body .button {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   padding: var(--space-3) var(--space-6);
-  background: var(--accent-color);
+  background: var(--postal-navy);
   color: var(--text-on-primary);
   text-decoration: none;
-  border-radius: var(--radius-lg);
-  font-weight: var(--font-weight-medium);
-  font-size: var(--text-sm);
+  border-radius: 2px;
+  font-family: var(--font-stamp);
+  font-weight: 600;
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
   transition: all 0.2s ease;
   border: none;
   cursor: pointer;
 }
 
 .cards-card-body .button:hover {
-  background: var(--accent-hover);
+  background: var(--postal-red);
   transform: translateY(-1px);
-  box-shadow: var(--shadow-md);
-}
-
-/* Featured card styling */
-.cards-card-body.featured {
-  border-color: var(--accent-color);
-  box-shadow: var(--shadow-lg);
-  transform: scale(1.02);
-}
-
-.cards-card-body.featured::before {
-  transform: scaleX(1);
 }
 
 .cards .cards-card-image {
   line-height: 0;
-  margin-bottom: var(--space-4);
-  border-radius: var(--radius-lg);
+  margin: calc(var(--space-10) * -1) calc(var(--space-8) * -1) var(--space-6);
   overflow: hidden;
+  border-radius: 4px 4px 0 0;
 }
 
 .cards > ul > li img {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
-  transition: transform 0.3s ease;
+  transition: transform 0.4s ease;
 }
 
 .cards-card-body:hover img {
-  transform: scale(1.05);
+  transform: scale(1.04);
 }
 
 @media (width >= 768px) {
   .cards ul {
-    gap: var(--space-10);
+    gap: var(--space-8);
   }
-  
+
   .cards-card-body {
-    padding: var(--space-10);
+    padding: var(--space-12) var(--space-10) var(--space-10);
   }
 }

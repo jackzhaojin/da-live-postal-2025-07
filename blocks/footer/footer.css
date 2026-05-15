@@ -1,20 +1,57 @@
 footer {
-  background-color: var(--light-color);
-  font-size: var(--body-font-size-xs);
+  background-color: var(--postal-navy);
+  color: rgb(255 255 255 / 80%);
+  font-size: var(--text-sm);
+  position: relative;
+  margin-top: var(--space-16);
+}
+
+/* Postal red top stripe — anchors the footer to the brand */
+footer::before {
+  content: '';
+  display: block;
+  height: 3px;
+  background: var(--postal-red);
+}
+
+/* Postmark / cancellation lines decoration */
+footer::after {
+  content: '';
+  position: absolute;
+  top: 30px;
+  right: 32px;
+  width: 80px;
+  height: 80px;
+  border: 2px solid rgb(255 255 255 / 18%);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle, transparent 30%, rgb(255 255 255 / 18%) 31%, rgb(255 255 255 / 18%) 32%, transparent 33%),
+    radial-gradient(circle, transparent 55%, rgb(255 255 255 / 18%) 56%, rgb(255 255 255 / 18%) 57%, transparent 58%);
+  pointer-events: none;
+  opacity: 0.6;
 }
 
 footer .footer > div {
   margin: auto;
   max-width: 1200px;
-  padding: 40px 24px 24px;
+  padding: var(--space-12) var(--space-6) var(--space-8);
+  font-family: var(--font-stamp);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: var(--text-xs);
 }
 
 footer .footer p {
   margin: 0;
+  color: rgb(255 255 255 / 70%);
+}
+
+footer .footer a {
+  color: var(--neutral-white);
 }
 
 @media (width >= 900px) {
   footer .footer > div {
-    padding: 40px 32px 24px;
+    padding: var(--space-12) var(--space-8) var(--space-8);
   }
 }
