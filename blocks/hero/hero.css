@@ -297,8 +297,46 @@
   letter-spacing: -0.02em;
 }
 
+/* H1 also needs the cream/white treatment when the hero is on navy
+ * (default .hero h1 is navy and would be invisible).
+ * Cream-on-navy ~13.6:1 contrast — WCAG AAA.
+ */
+.hero:not(:has(picture)) h1 {
+  color: var(--neutral-white);
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .hero:not(:has(picture)) h2::before {
   display: none;
+}
+
+/* Eyebrow blockquote on navy: cream text + cream rules */
+/* stylelint-disable-next-line no-descending-specificity */
+.hero:not(:has(picture)) blockquote p {
+  color: var(--postal-cream);
+  border-top-color: var(--postal-cream);
+  border-bottom-color: var(--postal-cream);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero:not(:has(picture)) blockquote p::before {
+  color: var(--postal-red-light);
+}
+
+/* Byline (h1 + p) on navy — was navy, now readable cream */
+/* stylelint-disable-next-line no-descending-specificity */
+.hero:not(:has(picture)) h1 + p {
+  color: var(--postal-cream);
+}
+
+/* Tags / final paragraph — was --text-muted (~1.4:1 on navy, fails AA),
+ * now uses cream at 70% opacity for a quiet but legible label.
+ * Contrast ~8:1, WCAG AA passes for both normal and large text.
+ */
+.hero:not(:has(picture)) h1 ~ p:last-of-type {
+  color: rgb(250 246 238 / 70%);
 }
 
 /* stylelint-disable-next-line no-descending-specificity */
@@ -411,6 +449,7 @@
 }
 
 /* Picture becomes a full-bleed postcard image */
+/* stylelint-disable-next-line no-descending-specificity */
 .hero.postcard p:has(picture) {
   margin: 0;
   padding: 0;
